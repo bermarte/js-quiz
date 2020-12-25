@@ -10,9 +10,9 @@ This is a simple website in which users can check their JS knowledge by taking a
 
 > describe the data used in your project.
 >
-> - what properties?
-> - what types?
-> - what are array entries like?
+> - as data we have a questions, answers (multiple answer for each question) and resorces links for user.
+> - data types are array and objects.
+> - it is a complex nested object, array data.
 
 ---
 
@@ -30,7 +30,7 @@ This is a simple website in which users can check their JS knowledge by taking a
 
 ## 0.Setup
 
-- Start a repo.
+- [Start a repo](https://github.com/bermarte/js-quiz).
 - Study (and possibly modify) the backlog
 - Design a simple wireframe to set guidelines for UI/UX design.
 - Devise a development strategy.
@@ -41,83 +41,106 @@ This is a simple website in which users can check their JS knowledge by taking a
 
 **As a user I want to see the home page when I load the site**
 
-- _acceptance criteria_
-- _acceptance criteria_
-- ...
+- _by accessing the website, I have a home page_
+- _where I have a list of questions_
+- _and a button to start the quiz._
+
 
 ### REPO
 
-- This user story is developed on branch `_`.
+- This user story is developed on branch `home`.
 - This branch is merged to `master` branch after completion.
 
 ### Task A
-
+create repository using the starter template
 ### Task B
-
-### Task ...
-
+create github pages for repository
+### Task C
+clone the repository
+### Task D
+create HTML and CSS
+### Task E
+add list of questions 
+### Task F
+add start button
 ---
 
 ## 2. Begin the Quiz
 
 **As a user I want to see at least 8 quiz questions**
-
-- _acceptance criteria_
-- _acceptance criteria_
+- _I am able to see a list of questions.
+- _I have a button to choose **start** quiz_
+- _I click the start button and I go to question number one_
 - ...
 
 ### REPO
 
-- This user story is developed on the branch `_`
+- This user story is developed on the branch `start-quiz`
 - This branch is merged to the `master` branch after completion.
 
 ### Task A
-
+show the list of questions for all users.
 ### Task B
-
-### Task ...
-
+show list of question and answers if user is loged in.
+### Task C
+**start** button in main page allows user to start the quiz.
+### Task D
+user can see only one question at a time along with answer options.
 ---
 
 ## 3. Select an answer
 
 **As a user I want to select my answer for each quiz question**
 
-- _acceptance criteria_
-- _acceptance criteria_
+- _I have one question with multiple answer chooices_
+- _I select one answer if it was correct it shows in green color_
+- _if answer is wrong it shows in red color_
+- _I have a timer that limits the time for choosing answer_
 - ...
 
 ### REPO
 
-- This user story is developed on the branch `_`
+- This user story is developed on the branch `select-answer`
 - This branch is merged to the `master` branch after completion.
 
 ### Task A
-
+show one question with multiple answer options.
 ### Task B
-
-### Task ...
-
+use radio button if there is one correct option.
+### Task D
+use chekboxes if there is more than one correct options.
+### Task E
+the correct answer shows in green color.
+### Task F
+the wrong answer shows in red color.
+### Task G
+show a timer with 30 sec count down for answering each quesion (progress bar and count down is optional).
 ---
 
 ## 4.a View Score
 
 **As a user I want to see my score**
+- _if the percentage was less than 50% show me a failed massage_
+- _I can see my score at the end of quiz_
+- _I can see my score after selecting the answer for each question_
 
-- _acceptance criteria_
-- _acceptance criteria_
 - ...
 
 ### REPO
 
-- This user story is developed on the branch `_`
+- This user story is developed on the branch `score`
 - This branch is merged to the `master` branch after completion.
 
 ### Task A
-
+increase the score by one after selecting a right answer.
 ### Task B
-
-### Task ...
+no increment if the answer is wrong.
+### Task C
+show the score after each selection.
+### Task D
+show the total score at the end of quiz.
+### Task E
+show the score percentage with failed or passed result (with an Emoji, is optional)
 
 ---
 
@@ -125,20 +148,21 @@ This is a simple website in which users can check their JS knowledge by taking a
 
 **As a user I want to know the correct answers for incorrect questions**
 
-- _acceptance criteria_
-- _acceptance criteria_
+- _show me the correct answer if I choosed wrong option_
+- _I can see the right answer for each question along with my score_
 - ...
 
 ### REPO
 
-- This user story is developed on the branch `_`
+- This user story is developed on the branch `correct-answer`
 - This branch is merged to the `master` branch after completion.
 
 ### Task A
-
+show the correct answer in green color
 ### Task B
-
-### Task ...
+show all correct answers if there was more than one options
+### Task C
+show the score along with answer.
 
 ---
 
@@ -146,19 +170,19 @@ This is a simple website in which users can check their JS knowledge by taking a
 
 **As a user I want to be able to see the correct answers without taking the quiz**
 
-- _acceptance criteria_
-- _acceptance criteria_
+- _if you I am registered user_
+- _and I have my login info then I am able to see the answers without taking the quiz_
 - ...
 
 ### REPO
 
-- This user story is developed on the branch `_`
+- This user story is developed on the branch `cheat`
 - This branch is merged to the `master` branch after completion.
 
 ### Task A
-
+all questions are available for loged in users.
 ### Task B
-
+user is able to see the answers by hovering on the question.
 ### Task ...
 
 ---
