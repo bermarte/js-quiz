@@ -190,6 +190,16 @@ each line in the provided array will be mirrored around the separator
 
 ## [./src/data.js](./src/data.js?study)
 
+## Constants
+
+<dl>
+<dt><a href="#data">data</a></dt>
+<dd><p>data that is saved and used between user interactionss</p>
+</dd>
+<dt><a href="#quizData">quizData</a></dt>
+<dd></dd>
+</dl>
+
 <a name="data"></a>
 
 ## data
@@ -202,5 +212,9 @@ data that is saved and used between user interactionss
 | --------- | --------------------------------- | ------------------------------------ |
 | separator | <code>string</code>               | the full user artwork                |
 | lines     | <code>Array.&lt;string&gt;</code> | all the lines that have been entered |
+
+<a name="quizData"></a>
+
+## quizData
 
 <!-- END DOCS -->
