@@ -9,7 +9,7 @@ on:
 
 jobs:
   document-and-test:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -23,13 +23,13 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - run: npm install
-      - uses: stefanzweifel/git-auto-commit-action@v4.7.2
+      - uses: stefanzweifel/git-auto-commit-action@v4.8.0
         with:
           commit_message: installing
           branch: ${{ github.head_ref }}
 
       - run: npm run document
-      - uses: stefanzweifel/git-auto-commit-action@v4.7.2
+      - uses: stefanzweifel/git-auto-commit-action@v4.8.0
         with:
           commit_message: documenting
           branch: ${{ github.head_ref }}
@@ -37,7 +37,7 @@ jobs:
       - run: npm run test-ci
         env:
           CI: true
-      - uses: stefanzweifel/git-auto-commit-action@v4.7.2
+      - uses: stefanzweifel/git-auto-commit-action@v4.8.0
         with:
           commit_message: testing
           branch: ${{ github.head_ref }}
