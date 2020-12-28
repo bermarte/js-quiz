@@ -17,55 +17,65 @@ A collection of user stories you can choose from. Stories inside of each priorit
 - [ ] A user can see a question  at a time
   - _When the user starts the quiz, one single question is shown at a time._
 
+- [ ] A user can see all the questions of the quiz
+  - _When the user starts the quiz, all the question are shown._
+
 - [ ] The user can select one possible answer at a time
   - _Different possible answers are shown; The user can select only one._
   
- - [ ] The user confirms the choice
+- [ ] The user confirms the choice
   - _The user made a selection._
  
 - [ ] A user can have receive an immediate feedback
   - _If the user gives the correct answer, the answer selected by the user is marked in green, otherwise in red._
   
- - [ ] A user can continue with the next question
+- [ ] A user can continue with the next question
   - _Next question is asked to the user._
   
 - [ ] A user can see their score at the end of the quiz
   - _Once the quiz is terminated; the user can see the score percentage._
   
-- [ ] A user can see all the questions and the answers
-  - _The user can see a report of all the questions and answers chosen, with the right answers, once the quiz is completed. _
+- [ ] A user can have an overview of all the questions and the answers given
+  - _The user can see a report of all the questions and answers chosen, with the right and wrong answers, once the quiz is completed._
+
+- [ ] A user can see the percentage of 
+  - _The user can see the percentage of responses that the user completed successfully._
   
 ## Should-Haves
 
 > these will complete the user experience, but are not necessary
 
 - [ ] A user can select more than one answer for each question
-  - _questions  be multiple choice or one option. if there was a radio button you have only one choice or if there was a checkbox you have multiple choices ..._
+  - _Use a `radio button` input when there is only one correct answer to choose from a number of possible answers or use a `checkbox` input if the user can select more than one possible answer._
 
 - [ ] A user can see one question at a time, stepping through the quiz (may require refactoring)
-  - _when you start the quiz one question at a time is available for you to choose the answer ..._
+  - _The user must answer one question at a time._
   
 - [ ] A user can "cheat" to see the correct answer, this forfeits the question
-  - _once you choosed one answer then you are able to see the correct answer you can cheat and go trough the question again and select the right answer ..._
+  - _Once the user chooses an answer, he/she willl be able to see the correct answer and repeat the quiz knowing which answer is right._
   
 - [ ] A user has access to resources for further study on each question
-  - _you are able to list some usfull links and add them to related questions ..._
+  - _Some useful links are added to related questions._
   
 - [ ] A user can see their score update in real-time as they select answers
-  - _when you are going further and you answer more questions you are able to see you score increasing if you choosed the right answer ..._
+  - _The user can see in real time how many right answers he/she gets._
 
 ## Could-Haves
 
 > would be really cool ... if there's time
 
 - [ ] A user can modify a question in the quiz
-  - _an edit option is available for you and you are free to modify the questions ..._
+  - _Giving an option to edit the text of a questions._
   
 - [ ] A user can remove questions from the quiz
-  - _if you don't like a question you can remove it from quiz forever ..._
+  - _Delete a question._
   
 - [ ] A user can add questions to the quiz
-  - _you are able to add more questions in the quiz. ..._
+  - _Add a question, add some answers and select which is true._
+
   
-- [ ] A user can see the timer that limits time for each question.
-  - _you have a timer that limits your question time you have to choose an answer in a particular time.
+- [ ] A user can see the timer that limits the time for each question
+  - _Set a limit on the time users have for each question._
+  
+- [ ] A user can select light or dark UI
+  - _THe user can select a light or a dark interface._
