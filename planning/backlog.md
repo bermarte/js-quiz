@@ -21,10 +21,13 @@ A collection of user stories you can choose from. Stories inside of each priorit
   - _Different possible answers are shown; The user can select only one._
   
  - [ ] The user confirms the choice
-  - _The user made a selection ._
+  - _The user made a selection._
  
 - [ ] A user can have receive an immediate feedback
   - _If the user gives the correct answer, the answer selected by the user is marked in green, otherwise in red._
+  
+ - [ ] A user can continue with the next question
+  - _Next question is asked to the user._
   
 - [ ] A user can see their score at the end of the quiz
   - _Once the quiz is terminated; the user can see the score percentage._
