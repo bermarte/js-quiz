@@ -11,3 +11,9 @@
   max-height: 80vh;
   overflow: auto;
 }
+.aTag {
+  text-decoration: none;
+}
+.liTag {
+  list-style-type: none;
+}
