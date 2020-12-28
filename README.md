@@ -1,4 +1,33 @@
-> ...
+# JS-Quiz
+
+Group 5 is:    
+- [Bermarte](https://github.com/bermarte)
+- [Burak](https://github.com/businan)
+- [Patrick](https://github.com/22count22)
+- [Peyman](https://github.com/peymanshahmarimikaeeldarehsi)
+- [Tahmina](https://github.com/tahminarasoli/)
+
+---
+FROM [STATE](https://github.com/HackYourFutureBelgium/state)
+
+### Project
+
+
+This week's project is to write a JS Quiz. You'll be given starter code with:
+
+- a suggested initial state for your quiz
+- a logging tool
+- testing support for /logic and /views
+- CI for testing & documentation when opening PRs to master or main
+- an example project in the repo (go ahead and delete the code when you start your project)
+
+The rest is up to you! Just be careful when scoping your project, it's better have a simple working quiz than a complicated broken one.
+
+---
+
+This is the js-quiz-starter [FROM HYF](https://github.com/HackYourFutureBelgium/js-quiz-starter)
+<details open>
+  <summary>collapse/expand</summary>
 
 ## Getting Started
 
@@ -38,5 +67,4 @@ After installing the dev dependencies you can start writing and running tests fo
 This repository comes with a GitHub Action to re-build the documentation and run all the tests whenever you push to `master`/`main`, and each time you open a PR to `master`/`main`. You don't need to do anything, it works!
 
 Having this CI action means that your master branch will always have the most up-to-date documentation, and that you can easily check test results when reviewing Pull Requests.
-
-> ...
+</details>
