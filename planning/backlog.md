@@ -80,11 +80,11 @@ A collection of user stories you can choose from. Stories inside of each priorit
 - [x] A user can add questions to the quiz
   - _Add a question, add some answers and select which is true._
   
- - [x] A user can store the questions
+- [x] A user can store the questions
   - _The question is stored and added to the JSON file._
  
 - [x] A user can see the timer that limits the time for each question
   - _Set a limit on the time users have for each question._
   
-- [x] A user can select light or dark UI
+- [x] A user can select a light or dark UI
   - _The user can select a light or a dark interface._
