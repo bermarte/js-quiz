@@ -71,8 +71,15 @@ for (let quiz of quizData.questions) {
         liEl.appendChild(a);
     }
 }
-// correct answers all the one array
-const correctAnswers = ['var, let, const', 'returns a string describing the type of a value']
+// correct answers all in one array
+const correctAnswers = [];
+
+for (let question of quizData.questions){
+    correctAnswers.push(question.answers[question.correct]);
+}
+console.table(correctAnswers);
+
+//const correctAnswers = ['var, let, const', 'returns a string describing the type of a value']
 divEl.addEventListener('click', (e) => {
 
     console.log(e.path) 
