@@ -10,6 +10,8 @@ Group 5 is:
 
 [Group issue](https://github.com/HackYourFutureBelgium/class-11-12/issues/250)    
 [Backlog](https://github.com/bermarte/js-quiz/blob/master/planning/backlog.md)    
+[Project Board](https://github.com/bermarte/js-quiz/projects/1?fullscreen=true)   
+[Discussion](https://github.com/bermarte/js-quiz/discussions/7)   
 [Development strategy](https://github.com/bermarte/js-quiz/blob/master/planning/development-strategy.md)    
 
 ---
