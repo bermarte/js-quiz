@@ -7,6 +7,11 @@ Group 5 is:
 - [Peyman](https://github.com/peymanshahmarimikaeeldarehsi)
 - [Tahmina](https://github.com/tahminarasoli/)
 
+
+[Group issue](https://github.com/HackYourFutureBelgium/class-11-12/issues/250)    
+[Backlog](https://github.com/bermarte/js-quiz/blob/master/planning/backlog.md)    
+[Development strategy](https://github.com/bermarte/js-quiz/blob/master/planning/development-strategy.md)    
+
 ---
 FROM [STATE](https://github.com/HackYourFutureBelgium/state)
 
