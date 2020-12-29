@@ -11,12 +11,15 @@ import { quizData } from '../data.js';
 
 // document.getElementById('separator-input').value = data.separator;
 
-const divEl = document.getElementById('question');
+const divEl = document.querySelectorAll('.carousel-inner')[0];
+// const divEl = document.getElementById('questions');
+console.log(divEl)
 // console.log(quizData.questions)
 
 for (let quiz of quizData.questions) {
     console.log(quizData.questions)
     const divEl2 = document.createElement('div');
+    divEl2.classList.add("carousel-item");
     divEl.appendChild(divEl2)
 
     const h3El = document.createElement('h3');
@@ -24,7 +27,6 @@ for (let quiz of quizData.questions) {
     divEl2.appendChild(h3El)
 
     const olEl = document.createElement('ol');
-    olEl.type = "A";
     divEl2.appendChild(olEl)
 
     for (let answer of Object.values(quiz.answers)) {
@@ -53,7 +55,7 @@ for (let quiz of quizData.questions) {
         olEl.appendChild(radioButtonText);
         olEl.appendChild(whiteSpace);
 
-        
+
     }
 
     const ulEl = document.createElement('ul');
@@ -71,14 +73,72 @@ for (let quiz of quizData.questions) {
         liEl.appendChild(a);
     }
 }
+
+// line 79-81 for adding active class just the firstChildren
+
+var menuItem = document.getElementsByClassName('carousel-inner')[0];
+console.log(menuItem.firstElementChild)
+menuItem.firstElementChild.classList.add('active')
+
+
+// checkitem function just for when user came the last carosel next button disappear
+
+function checkitem() {
+    const carouselLength = $('.carousel-item').length - 1;
+
+    // If there is more than one item
+    if (carouselLength) {
+        $('.carousel-control-next').removeClass('d-none');
+    }
+
+    $('.carousel').carousel({
+        interval: false,
+        wrap: false
+    }).on('slide.bs.carousel', function (e) {
+        // First one
+        if (e.to == 0) {
+            $('.carousel-control-next').removeClass('d-none');
+            console.log("1")
+        } // Last one
+        else if (e.to == carouselLength) {
+            $('.carousel-control-next').addClass('d-none');
+            console.log("2") // you can write a function
+            hello()
+        } // The rest
+        else {
+            $('.carousel-control-next').removeClass('d-none');
+            console.log("3")
+        }
+    });
+}
+
+checkitem();
+
+// coruselCounter function show which corusel is active carosel number and total carosel number 
+
+const coruselCounter = () => {
+    let totalItems = $('.carousel-item').length;
+    let currentIndex = $('div.active').index() + 1;
+    $('.num').html('' + currentIndex + '/' + totalItems + '');
+
+    $('#carouselExampleControls').on('slid.bs.carousel', function () {
+        currentIndex = $('div.active').index() + 1;
+        $('.num').html('' + currentIndex + '/' + totalItems + '');
+    });
+
+}
+
+coruselCounter()
+
 // correct answers all the one array
-const correctAnswers = ['var, let, const', 'returns a string describing the type of a value']
+const correctAnswers = ['onclick','for (i = 0; i < 5; i++)','if (a === b)','myFunction()','alert(Hello World)','<script>','as much as u want','=>','push()','toLowerCase()','var, let, const', 'returns a string describing the type of a value']
 divEl.addEventListener('click', (e) => {
 
-    console.log(e.path) 
-    let howMantPathElement = 8; // it shows when you clicked the label how many element that click property come from
-    if ((e.path).length === howMantPathElement && correctAnswers.includes(e.path[0].innerHTML)) {
-        // console.log((e.path[0].innerHTML)) 
+    console.log(e.path)
+    let howMantPathElement = 9; // it shows when you clicked the label how many element that click property come from
+    if ((e.path).length === howMantPathElement && correctAnswers.includes(e.path[0].innerText)) {
+        console.log((e.path[0].innerHTML)) 
+        console.log((e.path)) 
         let score = document.getElementById('score');
         // console.log(score)
         score.innerHTML = Number(score.innerHTML) + 1;
