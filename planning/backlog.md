@@ -19,10 +19,13 @@ A collection of user stories you can choose from. Stories inside of each priorit
   - _When the user starts the quiz, one single question is shown at a time._
 
 - [x] A user can see all the questions of the quiz
-  - _When the user starts the quiz, all the question are shown._
+  - _When the user starts the quiz, all the questions are shown._
 
 - [x] The user can select one possible answer at a time
   - _Different possible answers are shown; The user can select only one._
+  
+- [x] The user can answer to all the questions
+  - _All the questions are shown; The user can answer to all of them._
   
 - [x] The user confirms the choice
   - _The user made a selection._
@@ -33,13 +36,16 @@ A collection of user stories you can choose from. Stories inside of each priorit
 - [x] A user can continue with the next question
   - _Next question is asked to the user._
   
-- [x] A user can see their score at the end of the quiz
+- [x] A user can see the score at the end of the quiz
   - _Once the quiz is terminated; the user can see the score percentage._
+  
+ - [x] The result for a single question is shown
+  - _A user can see if the answer is correct immediately after providing an answer._
   
 - [x] A user can have an overview of all the questions and the answers given
   - _The user can see a report of all the questions and answers chosen, with the right and wrong answers, once the quiz is completed._
 
-- [x] A user can see the percentage of 
+- [x] A user can see the score at the end of the quiz
   - _The user can see the percentage of responses that the user completed successfully._
 ---
 ## Should-Haves
@@ -56,9 +62,9 @@ A collection of user stories you can choose from. Stories inside of each priorit
   - _Once the user chooses an answer, he/she willl be able to see the correct answer and repeat the quiz knowing which answer is right._
   
 - [x] A user has access to resources for further study on each question
-  - _Some useful links are added to related questions._
+  - _Some useful links related to the specific questions are added._
   
-- [x] A user can see their score update in real-time as they select answers
+- [x] A user can see the score update in real-time as they select answers
   - _The user can see in real time how many right answers he/she gets._
 ---
 ## Could-Haves
@@ -73,6 +79,9 @@ A collection of user stories you can choose from. Stories inside of each priorit
   
 - [x] A user can add questions to the quiz
   - _Add a question, add some answers and select which is true._
+  
+ - [x] A user can store the questions
+  - _The question is stored and added to the JSON file._
  
 - [x] A user can see the timer that limits the time for each question
   - _Set a limit on the time users have for each question._
