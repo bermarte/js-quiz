@@ -14,16 +14,21 @@ From [Wikipedia:](https://en.wikipedia.org/wiki/State_(computer_science))
 From [reecodecamp.org:](https://www.freecodecamp.org/news/state-in-javascript-explained-by-cooking-a-simple-meal-2baf10a787ee/)
 >**State** describes the status of the entire program or an individual object. It could be text, a number, a boolean, or another data type. It's a common tool for coordinating code. For example, once you update state, a bunch of different functions can instantly react to that change.
 
+[Go to the README](https://github.com/bermarte/js-quiz/blob/master/README.md)
 
 ---
 
 ## Data
 
 > describe the data used in your project.
->
-> - as data we have a questions, answers (multiple answer for each question) and resorces links for user.
-> - data types are array and objects.
-> - it is a complex nested object, array data.
+
+We use JSON to store the data and the state of the application; data types are arrays and objects. Data is stored in an array of objects containing objects and arrays.
+
+- Questions
+- Answers (multiple answers for each question)
+- Answer choosen by the user
+- Score
+- Resorces links
 
 ---
 
@@ -41,33 +46,28 @@ From [reecodecamp.org:](https://www.freecodecamp.org/news/state-in-javascript-ex
 
 ## 0.Setup
 
-- [Start a repo](https://github.com/bermarte/js-quiz).
-- Study and modify the backlog
-- Design a wireframe to set guidelines for UI/UX design.
-- Devise a development strategy.
+-[x] Create a [repo](https://github.com/bermarte/js-quiz) using the starter template
+-[x] Invite members
+-[x] Create the github page for the repo
+-[x] clone or fork the repository
+-[x] Study and modify the backlog
+-[x] Devise a development strategy
+-[ ] Design a wireframe to set guidelines for UI/UX design
+
+- This user story is developed on branch `master`
 
 ---
 
 ## 1. Initialize Application
 
-**As a user I want to see the home page when I load the site**
+**As a user I want to see the home page when I load the page**
 
-- _by accessing the website, I have a home page_
-- _where I have a list of questions_
-- _and a button to start the quiz._
+By accessing the website, I have a home page
+where I have a list of questions and a button to start the quiz
 
-
-### REPO
 
 - This user story is developed on branch `master`.
-- This branch is merged to `master` branch after completion.
 
-### Task A
-create repository using the starter template
-### Task B
-create github pages for repository
-### Task C
-clone the repository
 ### Task D
 create HTML and CSS
 ### Task E
