@@ -49,10 +49,11 @@ We use JSON to store the data and the state of the application; data types are a
 - [x] Create a [repo](https://github.com/bermarte/js-quiz) using the starter template
 - [x] Invite members
 - [x] Create the github page for the repo
-- [x] clone or fork the repository
+- [x] Clone or fork the repository
 - [x] Study and modify the backlog
 - [x] Devise a development strategy
 - [ ] Design a wireframe to set guidelines for UI/UX design
+- [ ] Design a user story dependencies diagram
 
 This user story is developed on branch `master`
 
@@ -60,116 +61,87 @@ This user story is developed on branch `master`
 
 ## 1. Initialize Application
 
-**As a user I want to see the home page when I load the page**
+**As a user I want to see a welcome message and a button to start the quiz**
 
 By accessing the web page, I see a welcome message and button to start the quiz
 
-
-- This user story is developed on branch `welcome`.
-
 - [ ] create the HTML and the CSS
 - [ ] add the start button
+
+- This user story is developed on branch `welcome`
 
 ---
 
 ## 2. Begin the Quiz
 
-**As a user I want to see at least 8 quiz questions**
-- _I am able to see a list of questions.
-- _I have a button to choose **start** quiz_
-- _I click the start button and I go to question number one_
-- ...
+**As a user I want to see the questions**
 
-### REPO
+The user clicks on the start button and goes to question number one
 
-- This user story is developed on the branch `start-quiz`
-- This branch is merged to the `master` branch after completion.
+- [ ] The user can see all the list of questions provided
+- [ ] The user can see only one question at a time, together with the different answers
 
-### Task A
-show the list of questions for all users.
-### Task B
-show list of question and answers if user is loged in.
-### Task C
-**start** button in main page allows user to start the quiz.
-### Task D
-user can see only one question at a time along with answer options.
+This user story is developed on the branch `start-quiz`.    
+This branch is merged into the `master` branch after completion.
+
 ---
 
 ## 3. Select an answer
 
-**As a user I want to select my answer for each quiz question**
+**As a user I want to select my answer for each question**
 
-- _I have one question with multiple answer chooices_
-- _I select one answer if it was correct it shows in green color_
-- _if answer is wrong it shows in red color_
-- _I have a timer that limits the time for choosing answer_
-- ...
+The user sees a list of possible answers from which to choose one; If the selected answer is correct, the text of the selected answer will be in green, red otherwise. Maybe we could use a timer that limits the time to select an answer.
 
-### REPO
+- [ ] Use radio button if there is only one correct answer.
+- [ ] Use chekboxes if there is more than one correct answer
+- [ ] The correct answer is displayed in green
+- [ ] The wrong answer is displayed in red
+- [ ] Implementing a timer with a count down (optional)
+- [ ] Implementing a progress bar (optional)
 
-- This user story is developed on the branch `select-answer`
-- This branch is merged to the `master` branch after completion.
+This user story is developed on the branch `select-answer`.    
+This branch is merged into the `master` branch after completion.
 
-### Task A
-show one question with multiple answer options.
-### Task B
-use radio button if there is one correct option.
-### Task D
-use chekboxes if there is more than one correct options.
-### Task E
-the correct answer shows in green color.
-### Task F
-the wrong answer shows in red color.
-### Task G
-show a timer with 30 sec count down for answering each quesion (progress bar and count down is optional).
 ---
 
-## 4.a View Score
+## 4 View the Score
 
 **As a user I want to see my score**
+<!--
 - _if the percentage was less than 50% show me a failed massage_
 - _I can see my score at the end of quiz_
 - _I can see my score after selecting the answer for each question_
+-->
 
-- ...
+- [ ] Increase the score by one after selecting a right answer
+- [ ] No increment if the answer is wrong
+- [ ] Show the score after each selection
+- [ ] Show the total score at the end of quiz
+- [ ] Show the message 'failed' if the user fails the quiz (optional)
+- [ ] Show the message 'passed' if the user passes the quiz
+- [ ] Use an Emoji (optional)
 
-### REPO
-
-- This user story is developed on the branch `score`
-- This branch is merged to the `master` branch after completion.
-
-### Task A
-increase the score by one after selecting a right answer.
-### Task B
-no increment if the answer is wrong.
-### Task C
-show the score after each selection.
-### Task D
-show the total score at the end of quiz.
-### Task E
-show the score percentage with failed or passed result (with an Emoji, is optional)
+This user story is developed on the branch `score`    
+This branch is merged to the `master` branch after completion
 
 ---
 
-## 4.b Get Feedback
+## 5 Get Feedback
 
 **As a user I want to know the correct answers for incorrect questions**
-
+<!--
 - _show me the correct answer if I choosed wrong option_
 - _I can see the right answer for each question along with my score_
 - ...
+-->
 
-### REPO
 
-- This user story is developed on the branch `correct-answer`
-- This branch is merged to the `master` branch after completion.
+- [ ] Display the correct answer in green
+- [ ] Display all correct answers if there was more than one options
+- [ ] Display the score
 
-### Task A
-show the correct answer in green color
-### Task B
-show all correct answers if there was more than one options
-### Task C
-show the score along with answer.
+This user story is developed on the branch `correct-answer`    
+This branch is merged to the `master` branch after completion.
 
 ---
 
@@ -179,17 +151,10 @@ show the score along with answer.
 
 - _if you I am registered user_
 - _and I have my login info then I am able to see the answers without taking the quiz_
-- ...
 
-### REPO
+- [ ] all questions are available
+- [ ] user is able to see the answers by hovering on the question.
 
-- This user story is developed on the branch `cheat`
-- This branch is merged to the `master` branch after completion.
 
-### Task A
-all questions are available for loged in users.
-### Task B
-user is able to see the answers by hovering on the question.
-### Task ...
-
----
+This user story is developed on the branch `cheat`    
+This branch is merged to the `master` branch after completion.
