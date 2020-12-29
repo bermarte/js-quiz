@@ -131,6 +131,7 @@ The user sees a list of questions, for each question there are some possible ans
 
 This user story is developed on the branch `select-answers`.    
 This branch is merged into the `master` branch after completion.
+
 ---
 
 ## 4 View the Score
@@ -207,3 +208,17 @@ A user has any questions to answer
 
 This user story is developed on the branch `questions`    
 This branch is merged into the `master` branch after completion.
+
+---
+
+## 7. Programming
+**As a developer I want to have a functioning project**
+## 8. Debugging
+**As a developer I want to solve the bugs I encounter in my code**
+## 9. Refactoring
+**As a developer I want to refactor my code**
+## 10. Documentation - code
+**As a developer I want to use JDOC to document the functions I am using**
+## 11. Documentation - project
+**As a developer I want to use the project board, creating issues and documenting what I am doing**
+
