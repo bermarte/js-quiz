@@ -44,7 +44,7 @@ export const quizData = {
   // the questions in the quiz
   questions: [
     {
-      text: '1.Which built-in method returns the calling string value converted to lower case?',
+      text: '1.Which built-in method returns a string converted to lowercase?',
       answers: {
         a: 'toLowerCase()',
         b: 'toLower()',
@@ -64,7 +64,7 @@ export const quizData = {
         },
       ],
     },{
-      text: '2.Which of the following function of Array object adds one or more elements to the end of an array and returns the new length of the array?',
+      text: '2.Which of the following functions of the Array object adds one or more elements to the end of an array and returns the new length of the array?',
       answers: {
         a: 'pop()',
         b: 'push()',
@@ -84,7 +84,7 @@ export const quizData = {
         },
       ],
     },{
-      text: '3.which of this is not! comparison operator? ',
+      text: '3.Which of these is not a comparison operator? ',
       answers: {
         a: '<',
         b: '>',
@@ -104,7 +104,7 @@ export const quizData = {
         },
       ],
     },{
-      text: '4.how many parameters can be passed for a function?',
+      text: '4.How many parameters can be passed to a function?',
       answers: {
         a: '2',
         b: 'none',
@@ -124,12 +124,12 @@ export const quizData = {
         },
       ],
     },{
-      text: '5.Inside which HTML element do we put the JavaScript?',
+      text: '5.Which HTML element do we use to wrap JavaScript\'s code?',
       answers: {
-        a: '<js>',
-        b: '<javaScript>',
-        c: '<script>',
-        d: '<body>',
+        a: '&lt;js&gt;',
+        b: '&lt;javaScript&gt;',
+        c: '&lt;script&gt;',
+        d: '&lt;body&gt;',
       },
       correct: 'c',
       selected: null,
@@ -146,7 +146,7 @@ export const quizData = {
     },{
       text: '6.How do you write "Hello World" in an alert box?',
       answers: {
-        a: 'msg(Hello World',
+        a: 'msg(Hello World)',
         b: 'prompt(Hello world)',
         c: 'message(hello World)',
         d: 'alert(Hello World)',
