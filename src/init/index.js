@@ -42,15 +42,15 @@ for (let quiz of quizData.questions) {
         // if you want to use radi button you can use 
         let number = Math.floor((Math.random() * 5000) + 1);
         const radioButton = document.createElement('input');
-        radioButton.setAttribute("type", "radio")
-        radioButton.setAttribute("id", `radioQuestion_${number}`)
-        radioButton.setAttribute("name", Object.values(quiz.answers)[0])
+        radioButton.setAttribute("type", "radio");
+        radioButton.setAttribute("id", `radioQuestion_${number}`);
+        radioButton.setAttribute("name", Object.values(quiz.answers)[0]);
         // radioButton.setAttribute("disabled")
         // radioButton.setAttribute("onclick", "Screen_Units(this)")
         const radioButtonText = document.createElement('label');
-        radioButtonText.setAttribute("for", `radioQuestion_${number}`)
+        radioButtonText.setAttribute("for", `radioQuestion_${number}`);
         radioButtonText.innerHTML = answer;
-        const whiteSpace = document.createElement('br')
+        const whiteSpace = document.createElement('br');
         olEl.appendChild(radioButton);
         olEl.appendChild(radioButtonText);
         olEl.appendChild(whiteSpace);
@@ -77,8 +77,8 @@ for (let quiz of quizData.questions) {
 // line 79-81 for adding active class just the firstChildren
 
 var menuItem = document.getElementsByClassName('carousel-inner')[0];
-console.log(menuItem.firstElementChild)
-menuItem.firstElementChild.classList.add('active')
+console.log(menuItem.firstElementChild);
+menuItem.firstElementChild.classList.add('active');
 
 
 // checkitem function just for when user came the last carosel next button disappear
@@ -128,40 +128,67 @@ const coruselCounter = () => {
 
 }
 
-coruselCounter()
+coruselCounter();
 
 
 // correct answers all in one array
+//const correctAnswers = [];
+//correctAnswers = ['onclick','for (i = 0; i < 5; i++)','if (a === b)','myFunction()','alert(Hello World)','<script>','as much as u want','=>','push()','toLowerCase()','var, let, const', 'returns a string describing the type of a value']
 const correctAnswers = [];
-correctAnswers = ['onclick','for (i = 0; i < 5; i++)','if (a === b)','myFunction()','alert(Hello World)','<script>','as much as u want','=>','push()','toLowerCase()','var, let, const', 'returns a string describing the type of a value']
-/*
 for (let question of quizData.questions){
     correctAnswers.push(question.answers[question.correct]);
 }
 console.table(correctAnswers);
-*/
 
-divEl.addEventListener('click', (e) => {
+let btnNext = document.querySelector('.carousel-control-next');
 
-    console.log(e.path)
-    let howMantPathElement = 9; // it shows when you clicked the label how many element that click property come from
-    if ((e.path).length === howMantPathElement && correctAnswers.includes(e.path[0].innerText)) {
-        console.log((e.path[0].innerHTML)) 
-        console.log((e.path)) 
+btnNext.addEventListener('click', (e) => {
+
+    const currentQuestion = document.querySelector('.num');
+    const allInputs = document.querySelectorAll('.active ol input');
+    const allLabels = document.querySelectorAll('.active ol label');
+
+    for (let i = 0; i < allInputs.length; i++) {
         let score = document.getElementById('score');
-        // console.log(score)
-        score.innerHTML = Number(score.innerHTML) + 1;
 
-        let index = correctAnswers.indexOf(e.path[0].innerHTML);
-        if (index > -1) {
-            // delete item from correctAnswers array when you clicked correct answer
-            correctAnswers.splice(index, 1);
+        if (allInputs[i].checked){
+            //allLabels[i].innerHTML is the text of the answer selected
+            const selected = allLabels[i].innerHTML;
+            const tmp = currentQuestion.innerHTML.split("/");
+            const currNum = tmp[0];
+            const expected = correctAnswers[currNum-1];
+            if (selected === expected){
+                score.innerHTML = Number(score.innerHTML) + 1;
+            }
+
         }
+       
+      }
 
-    }
+    
+
+    //alert(selectedDiv.querySelectorAll('input[name="choice"]'));
+    //alert(selectedDiv.innerHTML);
+
+
+    // let howMantPathElement = 9; // it shows when you clicked the label how many element that click property come from
+    // if ((e.path).length === howMantPathElement && correctAnswers.includes(e.path[0].innerText)) {
+    //     console.log((e.path[0].innerHTML)) 
+    //     console.log((e.path)) 
+    //     let score = document.getElementById('score');
+    //     // console.log(score)
+    //     score.innerHTML = Number(score.innerHTML) + 1;
+
+    //     let index = correctAnswers.indexOf(e.path[0].innerHTML);
+    //     if (index > -1) {
+    //         // delete item from correctAnswers array when you clicked correct answer
+    //         correctAnswers.splice(index, 1);
+    //     }
+
+    // }
 })
 
-// this code i try to remowe that unchecked radio buttons
+// this code i try to remove that unchecked radio buttons
 
 // const ele = document.getElementsByName("radioQuestionName");
 // console.log(ele)
