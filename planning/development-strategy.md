@@ -1,6 +1,6 @@
 # JavaScript Quiz
 
-You can test your JavaScript skills with this Quiz. The test contains n. questions and there is no time limit.    
+You can test your JavaScript skills with this Quiz. The test contains n. questions.    
 
 Aim of the project is to learn to work in group and to adopt the SoC design principle.    
 From [Wikipedia:](https://en.wikipedia.org/wiki/Separation_of_concerns)   
@@ -63,37 +63,49 @@ This user story is developed on branch `master`
 
 **As a user I want to see a welcome message and a button to start the quiz**
 
-By accessing the web page, I see a welcome message and button to start the quiz
+By accessing the web page, I see a welcome message and a button to start the quiz
 
-- [ ] create the HTML and the CSS
-- [ ] add the start button
+- [ ] Create the HTML and the CSS
+- [ ] Add the start button
 
-- This user story is developed on branch `welcome`
-
+- This user story is developed on the branch `welcome`.    
+This branch is merged into the `master` branch after completion.
 ---
 
-## 2. Begin the Quiz
+## 2. Begin the Quiz (one question at a time)
 
 **As a user I want to see the questions**
 
 The user clicks on the start button and goes to question number one
 
-- [ ] The user can see all the list of questions provided
 - [ ] The user can see only one question at a time, together with the different answers
 
 This user story is developed on the branch `start-quiz`.    
 This branch is merged into the `master` branch after completion.
 
 ---
+## 2. Begin the Quiz 
 
-## 3. Select an answer
+**As a user I want to see all the questions**
+
+The user clicks on the start button and goes to the questions
+
+- [ ] The user can see all the list of questions provided
+
+This user story is developed on the branch `start-quiz-all-questions`.    
+This branch is merged into the `master` branch after completion.
+
+---
+
+
+## 3. Select an answer  (one question at a time)
 
 **As a user I want to select my answer for each question**
 
 The user sees a list of possible answers from which to choose one; If the selected answer is correct, the text of the selected answer will be in green, red otherwise. Maybe we could use a timer that limits the time to select an answer.
 
 - [ ] Use radio button if there is only one correct answer.
-- [ ] Use chekboxes if there is more than one correct answer
+- [ ] Use chekboxes if there is more than one correct answer (optional)
 - [ ] The correct answer is displayed in green
 - [ ] The wrong answer is displayed in red
 - [ ] Implementing a timer with a count down (optional)
@@ -104,9 +116,27 @@ This branch is merged into the `master` branch after completion.
 
 ---
 
+## 3. Select all the answers
+
+**As a user I want to select my answers**
+
+The user sees a list of questions, for each question there are some possible answers from which to choose one; If the selected answer is correct, the text of the selected answer will be in green, red otherwise. Maybe we could use a timer that limits the time to complete the quiz.
+
+- [ ] Use radio button if there is only one correct answer.
+- [ ] Use chekboxes if there is more than one correct answer (optional)
+- [ ] The correct answer is displayed in green
+- [ ] The wrong answer is displayed in red
+- [ ] Implementing a timer with a count down (optional)
+- [ ] Implementing a progress bar (optional)
+
+This user story is developed on the branch `select-answers`.    
+This branch is merged into the `master` branch after completion.
+---
+
 ## 4 View the Score
 
 **As a user I want to see my score**
+The score is updated in real time at every answer
 <!--
 - _if the percentage was less than 50% show me a failed massage_
 - _I can see my score at the end of quiz_
@@ -116,32 +146,32 @@ This branch is merged into the `master` branch after completion.
 - [ ] Increase the score by one after selecting a right answer
 - [ ] No increment if the answer is wrong
 - [ ] Show the score after each selection
-- [ ] Show the total score at the end of quiz
-- [ ] Show the message 'failed' if the user fails the quiz (optional)
-- [ ] Show the message 'passed' if the user passes the quiz
-- [ ] Use an Emoji (optional)
 
 This user story is developed on the branch `score`    
 This branch is merged to the `master` branch after completion
 
 ---
 
-## 5 Get Feedback
+## 5 Review the quiz
 
-**As a user I want to know the correct answers for incorrect questions**
+**As a user I want to have an overview of the quiz once is completed**
+
+Once the quiz is completed the results are shown
 <!--
 - _show me the correct answer if I choosed wrong option_
 - _I can see the right answer for each question along with my score_
 - ...
 -->
 
+- [ ] Show the message 'failed' if the user fails the quiz (optional)
+- [ ] Show the message 'passed' if the user passes the quiz
+- [ ] Use an Emoji (optional)
+- [ ] Display all the correct answers in green
+- [ ] Display all the wrong answers in red
+- [ ] Display the final score
 
-- [ ] Display the correct answer in green
-- [ ] Display all correct answers if there was more than one options
-- [ ] Display the score
-
-This user story is developed on the branch `correct-answer`    
-This branch is merged to the `master` branch after completion.
+This user story is developed on the branch `review-quiz`    
+This branch is merged into the `master` branch after completion.
 
 ---
 
@@ -149,12 +179,31 @@ This branch is merged to the `master` branch after completion.
 
 **As a user I want to be able to see the correct answers without taking the quiz**
 
+A user can cheat and read all the right answers
+<!--
 - _if you I am registered user_
 - _and I have my login info then I am able to see the answers without taking the quiz_
+-->
 
-- [ ] all questions are available
-- [ ] user is able to see the answers by hovering on the question.
+- [ ] The user is able to see all the answers by clicking on the cheat button
+- [ ] All questions are available and the answers are available
 
 
 This user story is developed on the branch `cheat`    
 This branch is merged to the `master` branch after completion.
+
+---
+## 6. Data filling
+
+**As a developer I want to provide to the user a number of questions**
+
+A user has any questions to answer
+
+- [x] We need to insert other questions in the JSON file
+- [x] We need to find links to add
+- [x] Create a PR
+- [ ] review and merge the PR
+
+
+This user story is developed on the branch `questions`    
+This branch is merged into the `master` branch after completion.
