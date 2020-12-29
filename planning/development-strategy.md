@@ -1,8 +1,19 @@
 # JavaScript Quiz
 
-You can test your JavaScript skills with this Quiz. The test contains n. questions and there is no time limit. Aim of the project is to learn to work in group and to adopt the SoC design principle.    
+You can test your JavaScript skills with this Quiz. The test contains n. questions and there is no time limit.    
+
+Aim of the project is to learn to work in group and to adopt the SoC design principle.    
 From [Wikipedia:](https://en.wikipedia.org/wiki/Separation_of_concerns)   
-In computer science, separation of concerns (SoC) is a design principle for separating a computer program into distinct sections such that each section addresses a separate concern. A concern is a set of information that affects the code of a computer program.
+>In computer science, separation of concerns (SoC) is a design principle for separating a computer program into distinct sections such that each section addresses a separate concern. A concern is a set of information that affects the code of a computer program.
+
+Another concept we need to put into practice is that of **state** of an application.    
+From [Wikipedia:](https://en.wikipedia.org/wiki/State_(computer_science))    
+
+>A computer program stores data in variables, which represent storage locations in the computer's memory. The contents of these memory locations, at any given point in the program's execution, is called the program's state.    
+
+From [reecodecamp.org:](https://www.freecodecamp.org/news/state-in-javascript-explained-by-cooking-a-simple-meal-2baf10a787ee/)
+>**State** describes the status of the entire program or an individual object. It could be text, a number, a boolean, or another data type. It's a common tool for coordinating code. For example, once you update state, a bunch of different functions can instantly react to that change.
+
 
 ---
 
