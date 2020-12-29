@@ -130,8 +130,17 @@ const coruselCounter = () => {
 
 coruselCounter()
 
-// correct answers all the one array
-const correctAnswers = ['onclick','for (i = 0; i < 5; i++)','if (a === b)','myFunction()','alert(Hello World)','<script>','as much as u want','=>','push()','toLowerCase()','var, let, const', 'returns a string describing the type of a value']
+
+// correct answers all in one array
+const correctAnswers = [];
+correctAnswers = ['onclick','for (i = 0; i < 5; i++)','if (a === b)','myFunction()','alert(Hello World)','<script>','as much as u want','=>','push()','toLowerCase()','var, let, const', 'returns a string describing the type of a value']
+/*
+for (let question of quizData.questions){
+    correctAnswers.push(question.answers[question.correct]);
+}
+console.table(correctAnswers);
+*/
+
 divEl.addEventListener('click', (e) => {
 
     console.log(e.path)
