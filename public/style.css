@@ -17,3 +17,10 @@
 .liTag {
   list-style-type: none;
 }
+.carousel-control-next{
+  margin-right: 100px;
+  margin-top: 15%;
+  height: 100px;
+  width: 100px !important;
+  background-color: red;
+}
