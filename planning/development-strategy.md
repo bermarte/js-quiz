@@ -34,13 +34,13 @@ We use JSON to store the data and the state of the application; data types are a
 
 ## User Story Dependencies
 
-![Story Dependency Diagram]()
+![Story Dependency Diagram](https://github.com/bermarte/js-quiz/blob/master/planning/user-story.PNG)
 
 ---
 
 ## WIREFRAME
 
-![wireframe]()
+![figma](https://www.figma.com/file/1bbko0Mkahhhc3SGKBvXek/js-quiz?node-id=0%3A1)
 
 ---
 
