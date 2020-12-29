@@ -40,7 +40,7 @@ We use JSON to store the data and the state of the application; data types are a
 
 ## WIREFRAME
 
-![wireframe]()
+![figma](https://www.figma.com/file/1bbko0Mkahhhc3SGKBvXek/Untitled?node-id=0%3A1)
 
 ---
 
