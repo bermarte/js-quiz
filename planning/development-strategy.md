@@ -46,15 +46,15 @@ We use JSON to store the data and the state of the application; data types are a
 
 ## 0.Setup
 
--[x] Create a [repo](https://github.com/bermarte/js-quiz) using the starter template
--[x] Invite members
--[x] Create the github page for the repo
--[x] clone or fork the repository
--[x] Study and modify the backlog
--[x] Devise a development strategy
--[ ] Design a wireframe to set guidelines for UI/UX design
+- [x] Create a [repo](https://github.com/bermarte/js-quiz) using the starter template
+- [x] Invite members
+- [x] Create the github page for the repo
+- [x] clone or fork the repository
+- [x] Study and modify the backlog
+- [x] Devise a development strategy
+- [ ] Design a wireframe to set guidelines for UI/UX design
 
-- This user story is developed on branch `master`
+This user story is developed on branch `master`
 
 ---
 
@@ -62,18 +62,14 @@ We use JSON to store the data and the state of the application; data types are a
 
 **As a user I want to see the home page when I load the page**
 
-By accessing the website, I have a home page
-where I have a list of questions and a button to start the quiz
+By accessing the web page, I see a welcome message and button to start the quiz
 
 
-- This user story is developed on branch `master`.
+- This user story is developed on branch `welcome`.
 
-### Task D
-create HTML and CSS
-### Task E
-add list of questions 
-### Task F
-add start button
+- [ ] create the HTML and the CSS
+- [ ] add the start button
+
 ---
 
 ## 2. Begin the Quiz
