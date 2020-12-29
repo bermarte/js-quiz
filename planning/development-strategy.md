@@ -1,8 +1,8 @@
-> this is one possible development strategy, maybe your group has a different idea!
-
 # JavaScript Quiz
 
-This is a simple website in which users can check their JS knowledge by taking a quick quiz.
+You can test your JavaScript skills with this Quiz. The test contains n. questions and there is no time limit. Aim of the project is to learn to work in group and to adopt the SoC design principle.    
+From [Wikipedia:](https://en.wikipedia.org/wiki/Separation_of_concerns)   
+In computer science, separation of concerns (SoC) is a design principle for separating a computer program into distinct sections such that each section addresses a separate concern. A concern is a set of information that affects the code of a computer program.
 
 ---
 
@@ -31,8 +31,8 @@ This is a simple website in which users can check their JS knowledge by taking a
 ## 0.Setup
 
 - [Start a repo](https://github.com/bermarte/js-quiz).
-- Study (and possibly modify) the backlog
-- Design a simple wireframe to set guidelines for UI/UX design.
+- Study and modify the backlog
+- Design a wireframe to set guidelines for UI/UX design.
 - Devise a development strategy.
 
 ---
@@ -48,7 +48,7 @@ This is a simple website in which users can check their JS knowledge by taking a
 
 ### REPO
 
-- This user story is developed on branch `home`.
+- This user story is developed on branch `master`.
 - This branch is merged to `master` branch after completion.
 
 ### Task A
