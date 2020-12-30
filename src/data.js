@@ -86,10 +86,10 @@ export const quizData = {
     },{
       text: '3.Which of these is not a comparison operator? ',
       answers: {
-        a: '<',
-        b: '>',
+        a: '&lt;',
+        b: '&gt;',
         c: '==',
-        d: '=>',
+        d: '=&gt;',
       },
       correct: 'd',
       selected: null,
