@@ -71,12 +71,15 @@ console.log(menuItem.firstElementChild);
 menuItem.firstElementChild.classList.add('active');
 
 
-// checkitem function just for when user came the last carosel next button disappear
+/*
+checkitem function: when the user has arrived at the last carousel,
+the next-button of the carousel disappears
+*/
 
 function checkitem() {
     const carouselLength = $('.carousel-item').length;// -1
 
-    // If there is more than one item
+    // if there is more than one item
     if (carouselLength) {
         $('.carousel-control-next').removeClass('d-none');
     }
@@ -85,12 +88,12 @@ function checkitem() {
         interval: false,
         wrap: false
     }).on('slide.bs.carousel', function (e) {
-        // First one
+        // first one
         if (e.to == 0) {
             $('.carousel-control-next').removeClass('d-none');
             console.log("1, first question");
         }
-        // Last one
+        // last one
         else if (e.to == carouselLength-1) {
 
             /*
@@ -113,7 +116,7 @@ function checkitem() {
             lastQuestionSetter(lastQuestion.id);
             console.log("2, last question");
         } 
-        // The rest
+        // the rest
         else {
             $('.carousel-control-next').removeClass('d-none');
             console.log("3");
@@ -134,8 +137,7 @@ const lastQuestionSetter = (id) => {
 }
 
 const lastQuestion = () => {
-    console.log('how many answers '+userAnswers.length);
-    console.log('answers: '+userAnswers);
+
     //remove last button
     $('#endQuiz').remove();
     /*
@@ -160,8 +162,11 @@ const reviewQuizSetter = (id) => {
     endQuizBtn.addEventListener('click', showResults);
 }
 
+//quiz is done
 function showResults(){
-    alert('done');
+    console.log('how many answers '+userAnswers.length);
+    //console.log('answers: '+userAnswers);
+    console.log('answers:'+JSON.stringify(userAnswers));
 }
 
 /*
@@ -209,11 +214,17 @@ function checkScore(e){
             const tmp = currentQuestion.innerHTML.split("/");
             const currNum = tmp[0];
             const expected = correctAnswers[currNum - 1];
-            //add element to the array of answers
-            userAnswers.push(selected);
+            let res;
             if (selected === expected) {
                 score.innerHTML = Number(score.innerHTML) + 1;
+                res = 1; 
             }
+            else{
+                res = 0;
+            }
+            //push the result in the array of the answers
+            //to be finished
+            userAnswers.push({num: currNum, text: expected, correct: res});
         }
     }
 };
