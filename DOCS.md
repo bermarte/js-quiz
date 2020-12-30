@@ -11,6 +11,7 @@
   - [change-separator.js](#srchandlerschange-separatorjs)
 - [init](#init)
   - [index.js](#srcinitindexjs)
+  - [review.js](#srcinitreviewjs)
 - [listeners](#listeners)
   - [change-separator.js](#srclistenerschange-separatorjs)
   - [inputting.js](#srclistenersinputtingjs)
@@ -75,6 +76,10 @@ changes the program's separator value
 ---
 
 ### [./src/init/index.js](./src/init/index.js?study)
+
+---
+
+### [./src/init/review.js](./src/init/review.js?study)
 
 [TOP](#DOCS)
 
