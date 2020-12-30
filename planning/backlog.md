@@ -39,7 +39,7 @@ A collection of user stories you can choose from. Stories inside of each priorit
 - [x] A user can see the score at the end of the quiz
   - _Once the quiz is terminated; the user can see the score percentage._
   
- - [x] The result for a single question is shown
+- [x] The result for a single question is shown
   - _A user can see if the answer is correct immediately after providing an answer._
   
 - [x] A user can have an overview of all the questions and the answers given

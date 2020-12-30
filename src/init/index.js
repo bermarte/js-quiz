@@ -7,27 +7,29 @@
 // does your project have code that executes when the document or window are ready?
 // that code can go here
 
-import { quizData } from '../data.js';
+import {
+    quizData
+} from '../data.js';
 
 // document.getElementById('separator-input').value = data.separator;
 
 const divEl = document.querySelectorAll('.carousel-inner')[0];
 // const divEl = document.getElementById('questions');
-console.log(divEl)
+console.log(divEl);
 // console.log(quizData.questions)
 
 for (let quiz of quizData.questions) {
-    console.log(quizData.questions)
+    console.log(quizData.questions);
     const divEl2 = document.createElement('div');
     divEl2.classList.add("carousel-item");
-    divEl.appendChild(divEl2)
+    divEl.appendChild(divEl2);
 
     const h3El = document.createElement('h3');
     h3El.innerHTML = quiz.text;
-    divEl2.appendChild(h3El)
+    divEl2.appendChild(h3El);
 
     const olEl = document.createElement('ol');
-    divEl2.appendChild(olEl)
+    divEl2.appendChild(olEl);
 
     for (let answer of Object.values(quiz.answers)) {
 
@@ -98,16 +100,16 @@ function checkitem() {
         // First one
         if (e.to == 0) {
             $('.carousel-control-next').removeClass('d-none');
-            console.log("1")
+            console.log("1");
         } // Last one
         else if (e.to == carouselLength) {
             $('.carousel-control-next').addClass('d-none');
             console.log("2") // you can write a function
-            hello()
+            hello();
         } // The rest
         else {
             $('.carousel-control-next').removeClass('d-none');
-            console.log("3")
+            console.log("3");
         }
     });
 }
@@ -130,12 +132,10 @@ const coruselCounter = () => {
 
 coruselCounter();
 
-
-// correct answers all in one array
-//const correctAnswers = [];
 //correctAnswers = ['onclick','for (i = 0; i < 5; i++)','if (a === b)','myFunction()','alert(Hello World)','<script>','as much as u want','=>','push()','toLowerCase()','var, let, const', 'returns a string describing the type of a value']
+// correct answers all in one array
 const correctAnswers = [];
-for (let question of quizData.questions){
+for (let question of quizData.questions) {
     correctAnswers.push(question.answers[question.correct]);
 }
 console.table(correctAnswers);
@@ -151,21 +151,20 @@ btnNext.addEventListener('click', (e) => {
     for (let i = 0; i < allInputs.length; i++) {
         let score = document.getElementById('score');
 
-        if (allInputs[i].checked){
+        if (allInputs[i].checked) {
             //allLabels[i].innerHTML is the text of the answer selected
             const selected = allLabels[i].innerHTML;
             const tmp = currentQuestion.innerHTML.split("/");
             const currNum = tmp[0];
-            const expected = correctAnswers[currNum-1];
-            if (selected === expected){
+            const expected = correctAnswers[currNum - 1];
+            if (selected === expected) {
                 score.innerHTML = Number(score.innerHTML) + 1;
             }
-
         }
-       
-      }
 
-    
+    }
+
+
 
     //alert(selectedDiv.querySelectorAll('input[name="choice"]'));
     //alert(selectedDiv.innerHTML);

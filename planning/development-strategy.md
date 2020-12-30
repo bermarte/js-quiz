@@ -14,7 +14,7 @@ From [Wikipedia:](https://en.wikipedia.org/wiki/State_(computer_science))
 From [reecodecamp.org:](https://www.freecodecamp.org/news/state-in-javascript-explained-by-cooking-a-simple-meal-2baf10a787ee/)
 >**State** describes the status of the entire program or an individual object. It could be text, a number, a boolean, or another data type. It's a common tool for coordinating code. For example, once you update state, a bunch of different functions can instantly react to that change.
 
-[Go to the README](https://github.com/bermarte/js-quiz/blob/master/README.md)
+[Go to the README file](https://github.com/bermarte/js-quiz/blob/master/README.md)
 
 ---
 
@@ -38,9 +38,11 @@ We use JSON to store the data and the state of the application; data types are a
 
 ---
 
-## WIREFRAME
+## Wireframe
 
-![figma](https://www.figma.com/file/1bbko0Mkahhhc3SGKBvXek/js-quiz?node-id=0%3A1)
+![Wireframe](https://github.com/bermarte/js-quiz/blob/master/planning/wireframe.png)
+
+[Figma file](https://www.figma.com/file/1bbko0Mkahhhc3SGKBvXek/js-quiz?node-id=0%3A1)
 
 ---
 
@@ -52,8 +54,8 @@ We use JSON to store the data and the state of the application; data types are a
 - [x] Clone or fork the repository
 - [x] Study and modify the backlog
 - [x] Devise a development strategy
-- [ ] Design a wireframe to set guidelines for UI/UX design
-- [ ] Design a user story dependencies diagram
+- [x] Design a wireframe to set guidelines for UI/UX design
+- [x] Design a user story dependencies diagram
 
 This user story is developed on branch `master`
 
@@ -78,7 +80,7 @@ This branch is merged into the `master` branch after completion.
 
 The user clicks on the start button and goes to question number one
 
-- [ ] The user can see only one question at a time, together with the different answers
+- [x] The user can see only one question at a time, together with the different answers
 
 This user story is developed on the branch `start-quiz`.    
 This branch is merged into the `master` branch after completion.
@@ -104,7 +106,7 @@ This branch is merged into the `master` branch after completion.
 
 The user sees a list of possible answers from which to choose one; If the selected answer is correct, the text of the selected answer will be in green, red otherwise. Maybe we could use a timer that limits the time to select an answer.
 
-- [ ] Use radio button if there is only one correct answer.
+- [x] Use radio button if there is only one correct answer.
 - [ ] Use chekboxes if there is more than one correct answer (optional)
 - [ ] The correct answer is displayed in green
 - [ ] The wrong answer is displayed in red
@@ -144,12 +146,12 @@ The score is updated in real time at every answer
 - _I can see my score after selecting the answer for each question_
 -->
 
-- [ ] Increase the score by one after selecting a right answer
-- [ ] No increment if the answer is wrong
-- [ ] Show the score after each selection
+- [x] Increase the score by one after selecting a right answer
+- [x] No increment if the answer is wrong
+- [x] Show the score after each selection
 
-This user story is developed on the branch `score`    
-This branch is merged to the `master` branch after completion
+This user story is developed on the branch `master`    
+This branch is merged to the `master` 
 
 ---
 
@@ -176,7 +178,7 @@ This branch is merged into the `master` branch after completion.
 
 ---
 
-## 5. Cheat
+## 6. Cheat
 
 **As a user I want to be able to see the correct answers without taking the quiz**
 
@@ -194,7 +196,7 @@ This user story is developed on the branch `cheat`
 This branch is merged to the `master` branch after completion.
 
 ---
-## 6. Data filling
+## 7. Data filling
 
 **As a developer I want to provide to the user a number of questions**
 
@@ -203,7 +205,7 @@ A user has any questions to answer
 - [x] We need to insert other questions in the JSON file
 - [x] We need to find links to add
 - [x] Create a PR
-- [ ] review and merge the PR
+- [x] review and merge the PR
 
 
 This user story is developed on the branch `questions`    
@@ -211,14 +213,16 @@ This branch is merged into the `master` branch after completion.
 
 ---
 
-## 7. Programming
+## 8. Programming
 **As a developer I want to have a functioning project**
-## 8. Debugging
+## 9. Debugging
 **As a developer I want to solve the bugs I encounter in my code**
-## 9. Refactoring
+## 10. Cleaning up
+**As a developer I want to clean up my code**
+## 11. Refactoring
 **As a developer I want to refactor my code**
-## 10. Documentation - code
+## 12. Documentation - code
 **As a developer I want to use JDOC to document the functions I am using**
-## 11. Documentation - project
+## 13. Documentation - project
 **As a developer I want to use the project board, creating issues and documenting what I am doing**
 
