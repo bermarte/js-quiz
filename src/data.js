@@ -146,10 +146,10 @@ export const quizData = {
     },{
       text: '6.How do you write "Hello World" in an alert box?',
       answers: {
-        a: 'msg(Hello World)',
-        b: 'prompt(Hello world)',
-        c: 'message(hello World)',
-        d: 'alert(Hello World)',
+        a: 'msg("Hello World")',
+        b: 'prompt("Hello world")',
+        c: 'message("hello World")',
+        d: 'alert("Hello World")',
       },
       correct: 'd',
       selected: null,
@@ -206,10 +206,10 @@ export const quizData = {
     },{
       text: '9.How does a FOR loop start?',
       answers: {
-        a: 'for (const i = 0; i < 5; i++)',
-        b: 'for (i = 0; i < 5; i++)',
-        c: 'for const (i = 0; i < 5; i++)',
-        d: 'for let (i = 0; i < 5; i++)',
+        a: 'for (const i = 0; i &lt; 5; i++)',
+        b: 'for (let i = 0; i &lt; 5; i++)',
+        c: 'for const (i = 0; i &lt; 5; i++)',
+        d: 'for let (i = 0; i &lt; 5; i++)',
       },
       correct: 'b',
       selected: null,

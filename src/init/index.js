@@ -11,12 +11,12 @@ import {
     quizData
 } from '../data.js';
 
-// document.getElementById('separator-input').value = data.separator;
+
+//answers of the user
+const userAnswers = [];
 
 const divEl = document.querySelectorAll('.carousel-inner')[0];
-// const divEl = document.getElementById('questions');
 console.log(divEl);
-// console.log(quizData.questions)
 
 for (let quiz of quizData.questions) {
     console.log(quizData.questions);
@@ -33,22 +33,11 @@ for (let quiz of quizData.questions) {
 
     for (let answer of Object.values(quiz.answers)) {
 
-        // for the buttons
-
-        // let buttonElement = document.createElement('button')
-        // buttonElement.innerHTML = answer
-        // buttonElement.className = Object.values(quiz.answers)[0]
-        // buttonElement.style.display = "block"
-        // divEl2.appendChild(buttonElement)
-
-        // if you want to use radi button you can use 
         let number = Math.floor((Math.random() * 5000) + 1);
         const radioButton = document.createElement('input');
         radioButton.setAttribute("type", "radio");
         radioButton.setAttribute("id", `radioQuestion_${number}`);
         radioButton.setAttribute("name", Object.values(quiz.answers)[0]);
-        // radioButton.setAttribute("disabled")
-        // radioButton.setAttribute("onclick", "Screen_Units(this)")
         const radioButtonText = document.createElement('label');
         radioButtonText.setAttribute("for", `radioQuestion_${number}`);
         radioButtonText.innerHTML = answer;
@@ -56,7 +45,6 @@ for (let quiz of quizData.questions) {
         olEl.appendChild(radioButton);
         olEl.appendChild(radioButtonText);
         olEl.appendChild(whiteSpace);
-
 
     }
 
@@ -76,7 +64,7 @@ for (let quiz of quizData.questions) {
     }
 }
 
-// line 79-81 for adding active class just the firstChildren
+// adding active class to the first children
 
 var menuItem = document.getElementsByClassName('carousel-inner')[0];
 console.log(menuItem.firstElementChild);
@@ -101,12 +89,14 @@ function checkitem() {
         if (e.to == 0) {
             $('.carousel-control-next').removeClass('d-none');
             console.log("1, first question");
-        } // Last one
+        }
+        // Last one
         else if (e.to == carouselLength-1) {
-            
-            //$('.carousel-control-next').addClass('d-none');
-            //last question, remove the button and add a new one
-            //last button will show the final results
+
+            /*
+            last question: remove the button and add a new one,
+            that will show the final results when triggered
+            */
             $('.carousel-control-next').remove(); 
 
             const lastQuestion = document.createElement("button");
@@ -115,8 +105,10 @@ function checkitem() {
             lastQuestion.classList.add("carousel-control-next");
             const btnContainer = document.getElementById("buttonContainer");
             btnContainer.appendChild(lastQuestion);
-            //we create an id to select it
-            //and add an event listener to it
+            /*
+            we create an id to select it
+            and we add an event listener to it
+            */
             lastQuestion.id = 'endQuiz';
             lastQuestionSetter(lastQuestion.id);
             console.log("2, last question");
@@ -131,19 +123,53 @@ function checkitem() {
 
 checkitem();
 
-//end quiz
+/*
+end quiz: you need this setter to avoid an error
+coming from endQuizBtn not being defined
+*/
 const lastQuestionSetter = (id) => {
+    const lastQuestionBtn = document.getElementById(id);
+    lastQuestionBtn.addEventListener('click', lastQuestion);
+    lastQuestionBtn.addEventListener('click', checkScore);
+}
+
+const lastQuestion = () => {
+    console.log('how many answers '+userAnswers.length);
+    console.log('answers: '+userAnswers);
+    //remove last button
+    $('#endQuiz').remove();
+    /*
+    here there's a repetition, so we
+    will refactor it later
+    by wrapping it in a function
+    */
+
+    const reviewQuiz = document.createElement("button");
+    const text = document.createTextNode("Review quiz");
+    reviewQuiz.appendChild(text);
+    reviewQuiz.classList.add("carousel-control-next");
+    const btnContainer = document.getElementById("buttonContainer");
+    btnContainer.appendChild(reviewQuiz);
+    reviewQuiz.id = 'reviewQuiz';
+    //calling the function to view all the results
+    reviewQuizSetter(reviewQuiz.id);
+}
+
+const reviewQuizSetter = (id) => {
     const endQuizBtn = document.getElementById(id);
-    endQuizBtn.addEventListener('click', reviewQuiz);
+    endQuizBtn.addEventListener('click', showResults);
 }
 
-const reviewQuiz = () => {
-    alert('end of the quiz');//remove it later
+function showResults(){
+    alert('done');
 }
 
-// coruselCounter function show which corusel is active carosel number and total carosel number 
+/*
+the carouselCounter function shows which carousel is active,
+the current number of the carousel and the total number of carousels
+*/
 
-const coruselCounter = () => {
+const carouselCounter = () => {
     let totalItems = $('.carousel-item').length;
     let currentIndex = $('div.active').index() + 1;
     $('.num').html('' + currentIndex + '/' + totalItems + '');
@@ -155,9 +181,8 @@ const coruselCounter = () => {
 
 }
 
-coruselCounter();
+carouselCounter();
 
-//correctAnswers = ['onclick','for (i = 0; i < 5; i++)','if (a === b)','myFunction()','alert(Hello World)','<script>','as much as u want','=>','push()','toLowerCase()','var, let, const', 'returns a string describing the type of a value']
 // correct answers all in one array
 const correctAnswers = [];
 for (let question of quizData.questions) {
@@ -167,8 +192,10 @@ console.table(correctAnswers);
 
 let btnNext = document.querySelector('.carousel-control-next');
 
-btnNext.addEventListener('click', (e) => {
 
+btnNext.addEventListener('click', checkScore);
+
+function checkScore(e){
     const currentQuestion = document.querySelector('.num');
     const allInputs = document.querySelectorAll('.active ol input');
     const allLabels = document.querySelectorAll('.active ol label');
@@ -182,52 +209,11 @@ btnNext.addEventListener('click', (e) => {
             const tmp = currentQuestion.innerHTML.split("/");
             const currNum = tmp[0];
             const expected = correctAnswers[currNum - 1];
+            //add element to the array of answers
+            userAnswers.push(selected);
             if (selected === expected) {
                 score.innerHTML = Number(score.innerHTML) + 1;
             }
         }
-
     }
-
-
-
-    //alert(selectedDiv.querySelectorAll('input[name="choice"]'));
-    //alert(selectedDiv.innerHTML);
-
-
-    // let howMantPathElement = 9; // it shows when you clicked the label how many element that click property come from
-    // if ((e.path).length === howMantPathElement && correctAnswers.includes(e.path[0].innerText)) {
-    //     console.log((e.path[0].innerHTML)) 
-    //     console.log((e.path)) 
-    //     let score = document.getElementById('score');
-    //     // console.log(score)
-    //     score.innerHTML = Number(score.innerHTML) + 1;
-
-    //     let index = correctAnswers.indexOf(e.path[0].innerHTML);
-    //     if (index > -1) {
-    //         // delete item from correctAnswers array when you clicked correct answer
-    //         correctAnswers.splice(index, 1);
-    //     }
-
-    // }
-})
-
-// this code i try to remove that unchecked radio buttons
-
-// const ele = document.getElementsByName("radioQuestionName");
-// console.log(ele)
-// ele.forEach(el => el.addEventListener('click', Screen_Units))
-
-// function Screen_Units(t) {
-//     for (let i = 0; i < ele.length; i++) {
-//         console.log(ele[i])
-//         console.log(t.target)
-//         if (ele[i] != t.target) {
-//             let x = ele[i];
-//             console.log(x.parentNode.tagName)
-//             while (x.parentNode.tagName != "OL")
-//                 x = x.parentNode;
-//             x.style.display = "none";
-//         }
-//     }
-// }
+};
