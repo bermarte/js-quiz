@@ -86,7 +86,7 @@ menuItem.firstElementChild.classList.add('active');
 // checkitem function just for when user came the last carosel next button disappear
 
 function checkitem() {
-    const carouselLength = $('.carousel-item').length - 1;
+    const carouselLength = $('.carousel-item').length;// -1
 
     // If there is more than one item
     if (carouselLength) {
@@ -100,13 +100,28 @@ function checkitem() {
         // First one
         if (e.to == 0) {
             $('.carousel-control-next').removeClass('d-none');
-            console.log("1");
+            console.log("1, first question");
         } // Last one
-        else if (e.to == carouselLength) {
-            $('.carousel-control-next').addClass('d-none');
-            console.log("2") // you can write a function
-            hello();
-        } // The rest
+        else if (e.to == carouselLength-1) {
+            
+            //$('.carousel-control-next').addClass('d-none');
+            //last question, remove the button and add a new one
+            //last button will show the final results
+            $('.carousel-control-next').remove(); 
+
+            const lastQuestion = document.createElement("button");
+            const text = document.createTextNode("End Quiz");
+            lastQuestion.appendChild(text);
+            lastQuestion.classList.add("carousel-control-next");
+            const btnContainer = document.getElementById("buttonContainer");
+            btnContainer.appendChild(lastQuestion);
+            //we create an id to select it
+            //and add an event listener to it
+            lastQuestion.id = 'endQuiz';
+            lastQuestionSetter(lastQuestion.id);
+            console.log("2, last question");
+        } 
+        // The rest
         else {
             $('.carousel-control-next').removeClass('d-none');
             console.log("3");
@@ -115,6 +130,16 @@ function checkitem() {
 }
 
 checkitem();
+
+//end quiz
+const lastQuestionSetter = (id) => {
+    const endQuizBtn = document.getElementById(id);
+    endQuizBtn.addEventListener('click', reviewQuiz);
+}
+
+const reviewQuiz = () => {
+    alert('end of the quiz');//remove it later
+}
 
 // coruselCounter function show which corusel is active carosel number and total carosel number 
 
