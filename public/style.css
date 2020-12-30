@@ -1,12 +1,10 @@
-
-.main{
+.main {
   font: Arial, Helvetica, sans-serif;
   background-color: #e3eee1;
   padding: 40px;
-  
-  
 }
-a{
+
+a {
   background-color: #a7ada6;
 }
 
@@ -23,22 +21,26 @@ a{
   max-height: 80vh;
   overflow: auto;
 }
+
 .aTag {
   text-decoration: none;
 }
+
 .liTag {
   list-style-type: none;
 }
-label{
+
+label {
   padding: 8px;
 }
-label:hover{
-background-color: grye;
-opacity: 0.7;
 
-
+label:hover {
+  background-color: rgba(212, 212, 212, 0.8);
+  opacity: 0.7;
+  cursor: pointer;
 }
-.carousel-control-next{
+
+.carousel-control-next {
   margin-right: 100px;
   margin-top: 300px;
   position: absolute;
@@ -49,7 +51,9 @@ opacity: 0.7;
   box-shadow: 7px 5px 7px 5px rgba(0, 0, 0, 0.25);
   border-radius: 15px 5px;
 }
-
+.carousel-control-next:hover{
+  cursor: pointer;
+}
 /* @media screen and (min-width: 480px) {
   .carousel-control-next{width: 15%; margin-top: 70%;}
   
