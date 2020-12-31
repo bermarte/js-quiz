@@ -59,7 +59,14 @@ hr.ruler{
   border: 4px solid rgb(148, 147, 147, 0.5);
   border-radius: 5px;
 }
-/* @media screen and (min-width: 480px) {
-  .carousel-control-next{width: 15%; margin-top: 70%;}
-  
-} */
+
+span.answers{
+  background-color: rgba(143, 132, 231, 0.5);
+  border-radius: 5px;
+  padding: 4px;
+}
+span.user-answers{
+  background-color: rgba(179, 224, 207, 0.8);
+  border-radius: 5px;
+  padding: 4px;
+}
