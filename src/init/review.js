@@ -36,7 +36,7 @@ for (let quiz of quizData.questions) {
 
   for (let answer of Object.values(quiz.answers)) {
     let number = Math.floor(Math.random() * 5000 + 1);
-    const radioButton = document.createElement("input");
+    const radioButton = document.createElement("text");
     radioButton.setAttribute("type", "radio");
     radioButton.setAttribute("id", `radioQuestion_${number}`);
     radioButton.setAttribute("name", Object.values(quiz.answers)[0]);
@@ -63,6 +63,9 @@ for (let quiz of quizData.questions) {
       : `Your answer is ${
           newArrayWithoutEmpty[quizData.questions.indexOf(quiz)]
         }`;
+        // horizontal line to separate questions
+        const Line = document.createElement("hr");
   h4El_2.innerHTML = innerHTMLValue;
   divEl2.appendChild(h4El_2);
+  divEl2.appendChild(Line);
 }
