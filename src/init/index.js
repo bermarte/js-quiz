@@ -228,7 +228,6 @@ function checkScore(e) {
                 res = 0;
             }
             //push the result in the array of the answers
-            //to be finished
             userAnswers.push({ num: currNum, text: expected, correct: res });
         }
     }

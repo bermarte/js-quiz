@@ -63,9 +63,11 @@ for (let quiz of quizData.questions) {
       : `Your answer is ${
           newArrayWithoutEmpty[quizData.questions.indexOf(quiz)]
         }`;
-        // horizontal line to separate questions
-        const Line = document.createElement("hr");
+  // horizontal line to separate questions
+  const line = document.createElement("hr");
+  line.classList.add("ruler");
+
   h4El_2.innerHTML = innerHTMLValue;
   divEl2.appendChild(h4El_2);
-  divEl2.appendChild(Line);
+  divEl2.appendChild(line);
 }
