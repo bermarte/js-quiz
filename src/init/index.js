@@ -94,13 +94,13 @@ function checkitem() {
             console.log("1, first question");
         }
         // last one
-        else if (e.to == carouselLength-1) {
+        else if (e.to == carouselLength - 1) {
 
             /*
             last question: remove the button and add a new one,
             that will show the final results when triggered
             */
-            $('.carousel-control-next').remove(); 
+            $('.carousel-control-next').remove();
 
             const lastQuestion = document.createElement("button");
             const text = document.createTextNode("End Quiz");
@@ -115,7 +115,7 @@ function checkitem() {
             lastQuestion.id = 'endQuiz';
             lastQuestionSetter(lastQuestion.id);
             console.log("2, last question");
-        } 
+        }
         // the rest
         else {
             $('.carousel-control-next').removeClass('d-none');
@@ -163,10 +163,12 @@ const reviewQuizSetter = (id) => {
 }
 
 //quiz is done
-function showResults(){
-    console.log('how many answers '+userAnswers.length);
+function showResults() {
+    console.log('how many answers ' + userAnswers.length);
     //console.log('answers: '+userAnswers);
-    console.log('answers:'+JSON.stringify(userAnswers));
+    console.log('answers:' + JSON.stringify(userAnswers));
+
+    window.location.replace("review.html")
 }
 
 /*
@@ -174,19 +176,18 @@ the carouselCounter function shows which carousel is active,
 the current number of the carousel and the total number of carousels
 */
 
-const carouselCounter = () => {
-    let totalItems = $('.carousel-item').length;
-    let currentIndex = $('div.active').index() + 1;
+
+let totalItems = $('.carousel-item').length;
+let currentIndex = $('div.active').index() + 1;
+$('.num').html('' + currentIndex + '/' + totalItems + '');
+
+$('#carouselExampleControls').on('slid.bs.carousel', function () {
+    currentIndex = $('div.active').index() + 1;
     $('.num').html('' + currentIndex + '/' + totalItems + '');
+});
 
-    $('#carouselExampleControls').on('slid.bs.carousel', function () {
-        currentIndex = $('div.active').index() + 1;
-        $('.num').html('' + currentIndex + '/' + totalItems + '');
-    });
 
-}
 
-carouselCounter();
 
 // correct answers all in one array
 const correctAnswers = [];
@@ -200,7 +201,9 @@ let btnNext = document.querySelector('.carousel-control-next');
 
 btnNext.addEventListener('click', checkScore);
 
-function checkScore(e){
+const globalUserAnswers = [];
+
+function checkScore(e) {
     const currentQuestion = document.querySelector('.num');
     const allInputs = document.querySelectorAll('.active ol input');
     const allLabels = document.querySelectorAll('.active ol label');
@@ -211,20 +214,22 @@ function checkScore(e){
         if (allInputs[i].checked) {
             //allLabels[i].innerHTML is the text of the answer selected
             const selected = allLabels[i].innerHTML;
+            globalUserAnswers.push({[currentIndex-1]:selected})
+            localStorage.setItem("globalAnswerStorage", JSON.stringify(globalUserAnswers));
             const tmp = currentQuestion.innerHTML.split("/");
             const currNum = tmp[0];
             const expected = correctAnswers[currNum - 1];
             let res;
             if (selected === expected) {
                 score.innerHTML = Number(score.innerHTML) + 1;
-                res = 1; 
+                res = 1;
             }
-            else{
+            else {
                 res = 0;
             }
             //push the result in the array of the answers
             //to be finished
-            userAnswers.push({num: currNum, text: expected, correct: res});
+            userAnswers.push({ num: currNum, text: expected, correct: res });
         }
     }
 };
