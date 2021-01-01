@@ -11,15 +11,22 @@ import {
     quizData
 } from '../data.js';
 
+// correct answers all in one array
+const correctAnswers = [];
+for (let question of quizData.questions) {
+    correctAnswers.push(question.answers[question.correct]);
+}
+console.table(correctAnswers);
 
 //answers of the user
 const userAnswers = [];
 
-const divEl = document.querySelectorAll('.carousel-inner')[0];
-console.log(divEl);
+
 
 for (let quiz of quizData.questions) {
     console.log(quizData.questions);
+    const divEl = document.querySelectorAll('.carousel-inner')[0];
+    console.log(divEl);
     const divEl2 = document.createElement('div');
     divEl2.classList.add("carousel-item");
     divEl.appendChild(divEl2);
@@ -69,7 +76,6 @@ for (let quiz of quizData.questions) {
 var menuItem = document.getElementsByClassName('carousel-inner')[0];
 console.log(menuItem.firstElementChild);
 menuItem.firstElementChild.classList.add('active');
-
 
 /*
 checkitem function: when the user has arrived at the last carousel,
@@ -165,10 +171,9 @@ const reviewQuizSetter = (id) => {
 //quiz is done
 function showResults() {
     console.log('how many answers ' + userAnswers.length);
-    //console.log('answers: '+userAnswers);
     console.log('answers:' + JSON.stringify(userAnswers));
 
-    window.location.replace("review.html")
+    window.location.replace("review.html");
 }
 
 /*
@@ -186,15 +191,6 @@ $('#carouselExampleControls').on('slid.bs.carousel', function () {
     $('.num').html('' + currentIndex + '/' + totalItems + '');
 });
 
-
-
-
-// correct answers all in one array
-const correctAnswers = [];
-for (let question of quizData.questions) {
-    correctAnswers.push(question.answers[question.correct]);
-}
-console.table(correctAnswers);
 
 let btnNext = document.querySelector('.carousel-control-next');
 
