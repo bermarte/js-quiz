@@ -10,8 +10,10 @@ let counter = 0;
 const divEl = document.querySelectorAll(".review")[0];
 const get = JSON.parse(localStorage.getItem("globalAnswerStorage"));
 
-for (let i = 0; i < get.length; i++) {
-  newArrayWithEmpty[Number(Object.keys(get[i])[0])] = Object.values(get[i])[0];
+if (get !== null){
+  for (let i = 0; i < get.length; i++) {
+    newArrayWithEmpty[Number(Object.keys(get[i])[0])] = Object.values(get[i])[0];
+  }
 }
 
 for (let i = 0; i < total; i++) {

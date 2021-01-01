@@ -20,6 +20,7 @@ console.table(correctAnswers);
 
 //answers of the user
 const userAnswers = [];
+localStorage.clear();
 
 
 
@@ -210,7 +211,7 @@ function checkScore(e) {
         if (allInputs[i].checked) {
             //allLabels[i].innerHTML is the text of the answer selected
             const selected = allLabels[i].innerHTML;
-            globalUserAnswers.push({[currentIndex-1]:selected})
+            globalUserAnswers.push({[currentIndex-1]:selected});
             localStorage.setItem("globalAnswerStorage", JSON.stringify(globalUserAnswers));
             const tmp = currentQuestion.innerHTML.split("/");
             const currNum = tmp[0];
