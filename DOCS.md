@@ -10,26 +10,28 @@
   - [artify.js](#srchandlersartifyjs)
   - [change-separator.js](#srchandlerschange-separatorjs)
   - [checkScore.js](#srchandlerscheckScorejs)
+  - [goToindexHandler.js](#srchandlersgoToindexHandlerjs)
   - [showResults.js](#srchandlersshowResultsjs)
-- [init](#init)
-  - [index.js](#srcinitindexjs)
-  - [review.js](#srcinitreviewjs)
 - [listeners](#listeners)
   - [change-separator.js](#srclistenerschange-separatorjs)
+  - [goToIndex.js](#srclistenersgoToIndexjs)
   - [inputting.js](#srclistenersinputtingjs)
   - [next.js](#srclistenersnextjs)
 - [logic](#logic)
   - [allAnswers.js](#srclogicallAnswersjs)
   - [checkItem.js](#srclogiccheckItemjs)
   - [dataQuestions.js](#srclogicdataQuestionsjs)
+  - [getNull.js](#srclogicgetNulljs)
   - [lastQuestion.js](#srclogiclastQuestionjs)
   - [lastQuestionSetter.js](#srclogiclastQuestionSetterjs)
   - [reverse.js](#srclogicreversejs)
+  - [reviewArray.js](#srclogicreviewArrayjs)
   - [reviewQuizSetter.js](#srclogicreviewQuizSetterjs)
 - [views](#views)
   - [artify.js](#srcviewsartifyjs)
 - [data.js](#srcdatajs)
 - [init.js](#srcinitjs)
+- [review.js](#srcreviewjs)
 
 <!-- END TOC -->
 
@@ -81,23 +83,11 @@ changes the program's separator value
 
 ---
 
+### [./src/handlers/goToindexHandler.js](./src/handlers/goToindexHandler.js?study)
+
+---
+
 ### [./src/handlers/showResults.js](./src/handlers/showResults.js?study)
-
-[TOP](#DOCS)
-
----
-
----
-
-# init
-
----
-
-### [./src/init/index.js](./src/init/index.js?study)
-
----
-
-### [./src/init/review.js](./src/init/review.js?study)
 
 [TOP](#DOCS)
 
@@ -121,6 +111,10 @@ calls handler that changes the mirror-arts separator"></a>
 ## change separator
 
 calls handler that changes the mirror-arts separator
+
+---
+
+### [./src/listeners/goToIndex.js](./src/listeners/goToIndex.js?study)
 
 ---
 
@@ -169,6 +163,10 @@ Logic functions will _never_ ...
 
 ---
 
+### [./src/logic/getNull.js](./src/logic/getNull.js?study)
+
+---
+
 ### [./src/logic/lastQuestion.js](./src/logic/lastQuestion.js?study)
 
 ---
@@ -190,6 +188,10 @@ reverses a string
 | Param | Type                | Description         |
 | ----- | ------------------- | ------------------- |
 | input | <code>string</code> | a string to reverse |
+
+---
+
+### [./src/logic/reviewArray.js](./src/logic/reviewArray.js?study)
 
 ---
 
@@ -271,5 +273,9 @@ data that is saved and used between user interactionss
 ---
 
 ## [./src/init.js](./src/init.js?study)
+
+---
+
+## [./src/review.js](./src/review.js?study)
 
 <!-- END DOCS -->
