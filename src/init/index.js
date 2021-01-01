@@ -98,7 +98,6 @@ function checkitem() {
         // first one
         if (e.to == 0) {
             $('.carousel-control-next').removeClass('d-none');
-            console.log("1, first question");
         }
         // last one
         else if (e.to == carouselLength - 1) {
@@ -121,12 +120,11 @@ function checkitem() {
             */
             lastQuestion.id = 'endQuiz';
             lastQuestionSetter(lastQuestion.id);
-            console.log("2, last question");
+
         }
         // the rest
         else {
             $('.carousel-control-next').removeClass('d-none');
-            console.log("3");
         }
     });
 }
@@ -174,7 +172,7 @@ function showResults() {
     console.log('how many answers ' + userAnswers.length);
     console.log('answers:' + JSON.stringify(userAnswers));
 
-    window.location.replace("review.html");
+    window.location.replace("./review.html");
 }
 
 /*
@@ -225,6 +223,7 @@ function checkScore(e) {
                 res = 0;
             }
             //push the result in the array of the answers
+            //not used
             userAnswers.push({ num: currNum, text: expected, correct: res });
         }
     }

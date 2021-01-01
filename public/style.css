@@ -3,18 +3,6 @@
   padding: 40px;
 }
 
-a {
-  background-color: #a7ada6;
-}
-
-.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
 .scrollable {
   height: auto;
   max-height: 80vh;
@@ -43,6 +31,7 @@ label:hover {
 .carousel-control-next {
   margin-right: 100px;
   margin-top: 300px;
+  min-width: 44px;
   position: absolute;
   height: 8%;
   width: 10% !important;
@@ -74,4 +63,10 @@ span.user-answers-red{
   background-color: rgba(221, 121, 112, 0.8);
   border-radius: 5px;
   padding: 4px;
+}
+
+#retakeQuiz{
+  position: fixed;
+  min-width: 44px;
+  line-height: 1;
 }

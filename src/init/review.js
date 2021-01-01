@@ -69,3 +69,10 @@ for (let quiz of quizData.questions) {
   //skip last one
   if (counter < total) divEl2.appendChild(line);
 }
+
+const btnIndex = document.getElementById('retakeQuiz');
+const goToIndex = () => {
+  window.location.replace("./index.html");
+}
+btnIndex.addEventListener('click', goToIndex);
+
