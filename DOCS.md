@@ -9,17 +9,27 @@
 - [handlers](#handlers)
   - [artify.js](#srchandlersartifyjs)
   - [change-separator.js](#srchandlerschange-separatorjs)
+  - [checkScore.js](#srchandlerscheckScorejs)
+  - [showResults.js](#srchandlersshowResultsjs)
 - [init](#init)
   - [index.js](#srcinitindexjs)
   - [review.js](#srcinitreviewjs)
 - [listeners](#listeners)
   - [change-separator.js](#srclistenerschange-separatorjs)
   - [inputting.js](#srclistenersinputtingjs)
+  - [next.js](#srclistenersnextjs)
 - [logic](#logic)
+  - [allAnswers.js](#srclogicallAnswersjs)
+  - [checkItem.js](#srclogiccheckItemjs)
+  - [dataQuestions.js](#srclogicdataQuestionsjs)
+  - [lastQuestion.js](#srclogiclastQuestionjs)
+  - [lastQuestionSetter.js](#srclogiclastQuestionSetterjs)
   - [reverse.js](#srclogicreversejs)
+  - [reviewQuizSetter.js](#srclogicreviewQuizSetterjs)
 - [views](#views)
   - [artify.js](#srcviewsartifyjs)
 - [data.js](#srcdatajs)
+- [init.js](#srcinitjs)
 
 <!-- END TOC -->
 
@@ -64,6 +74,14 @@ changes the program's separator value
 | Param | Type               | Description                                                 |
 | ----- | ------------------ | ----------------------------------------------------------- |
 | event | <code>Event</code> | triggered whenever a user types in the separator input area |
+
+---
+
+### [./src/handlers/checkScore.js](./src/handlers/checkScore.js?study)
+
+---
+
+### [./src/handlers/showResults.js](./src/handlers/showResults.js?study)
 
 [TOP](#DOCS)
 
@@ -115,6 +133,10 @@ calls the reverseHandler when a user types in the input field"></a>
 
 calls the reverseHandler when a user types in the input field
 
+---
+
+### [./src/listeners/next.js](./src/listeners/next.js?study)
+
 [TOP](#DOCS)
 
 ---
@@ -135,6 +157,26 @@ Logic functions will _never_ ...
 
 ---
 
+### [./src/logic/allAnswers.js](./src/logic/allAnswers.js?study)
+
+---
+
+### [./src/logic/checkItem.js](./src/logic/checkItem.js?study)
+
+---
+
+### [./src/logic/dataQuestions.js](./src/logic/dataQuestions.js?study)
+
+---
+
+### [./src/logic/lastQuestion.js](./src/logic/lastQuestion.js?study)
+
+---
+
+### [./src/logic/lastQuestionSetter.js](./src/logic/lastQuestionSetter.js?study)
+
+---
+
 ### [./src/logic/reverse.js](./src/logic/reverse.js?study)
 
 <a name="reverse"></a>
@@ -148,6 +190,10 @@ reverses a string
 | Param | Type                | Description         |
 | ----- | ------------------- | ------------------- |
 | input | <code>string</code> | a string to reverse |
+
+---
+
+### [./src/logic/reviewQuizSetter.js](./src/logic/reviewQuizSetter.js?study)
 
 [TOP](#DOCS)
 
@@ -221,5 +267,9 @@ data that is saved and used between user interactionss
 <a name="quizData"></a>
 
 ## quizData
+
+---
+
+## [./src/init.js](./src/init.js?study)
 
 <!-- END DOCS -->
