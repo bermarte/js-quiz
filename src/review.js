@@ -1,28 +1,16 @@
 "use strict";
 
-import { quizData } from "../data.js";
+import { quizData } from "./data.js";
+import { getNull } from './logic/getNull.js';
+import { newArrayWithoutEmpty } from './logic/reviewArray.js';
+import './listeners/goToIndex.js';
 
 
-const newArrayWithEmpty = [];
-const newArrayWithoutEmpty = [];
 const total = quizData.questions.length;
 let counter = 0;
 const divEl = document.querySelectorAll(".review")[0];
-const get = JSON.parse(localStorage.getItem("globalAnswerStorage"));
 
-if (get !== null){
-  for (let i = 0; i < get.length; i++) {
-    newArrayWithEmpty[Number(Object.keys(get[i])[0])] = Object.values(get[i])[0];
-  }
-}
-
-for (let i = 0; i < total; i++) {
-  if (newArrayWithEmpty[i] === undefined) {
-    newArrayWithoutEmpty.push("You did not select anything...");
-  } else {
-    newArrayWithoutEmpty.push(newArrayWithEmpty[i]);
-  }
-}
+getNull();
 
 for (let quiz of quizData.questions) {
   counter++;
@@ -69,10 +57,4 @@ for (let quiz of quizData.questions) {
   //skip last one
   if (counter < total) divEl2.appendChild(line);
 }
-
-const btnIndex = document.getElementById('retakeQuiz');
-const goToIndex = () => {
-  window.location.replace("./index.html");
-}
-btnIndex.addEventListener('click', goToIndex);
 
