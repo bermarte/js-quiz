@@ -41,6 +41,9 @@ We use JSON to store the data and the state of the application; data types are a
 ## Wireframe
 
 ![Wireframe](https://github.com/bermarte/js-quiz/blob/master/planning/wireframe.png)
+first version
+![Wireframe last version](https://github.com/bermarte/js-quiz/blob/master/planning/wireframe_2.png)
+last version
 
 [Figma file](https://www.figma.com/file/1bbko0Mkahhhc3SGKBvXek/js-quiz?node-id=0%3A1)
 
