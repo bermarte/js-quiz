@@ -10,7 +10,6 @@ import { correctAnswer } from './views/correctAnswer.js';
 import { newArrayWithoutEmptyView } from './views/newArrayWithoutEmptyView.js';//54
 
 
-//const total = quizData.questions.length;
 let counter = 0;
 const divEl = document.querySelectorAll(".review")[0];
 
@@ -52,22 +51,6 @@ for (let quiz of quizData.questions) {
   const pEl_2 = document.createElement("p");
   //view
   let innerHTMLValue = newArrayWithoutEmptyView(newArrayWithoutEmpty[quizData.questions.indexOf(quiz)], userAnswer);
-  ///
-    // newArrayWithoutEmpty[quizData.questions.indexOf(quiz)] ===
-    // "You did not select anything..."
-    //   ? "You did not select anything..."
-    //   : `Your answer is <span class=${userAnswer}>${
-    //       newArrayWithoutEmpty[quizData.questions.indexOf(quiz)]
-    //     }</span>`;
-
-    //     let innerHTMLValue =
-    // newArrayWithoutEmpty[quizData.questions.indexOf(quiz)] ===
-    // "You did not select anything..."
-    //   ? "You did not select anything..."
-    //   : `Your answer is <span class=${userAnswer}>${
-    //       newArrayWithoutEmpty[quizData.questions.indexOf(quiz)]
-    //     }</span>`;
-
 
   // horizontal line to separate questions
   const line = document.createElement("hr");
