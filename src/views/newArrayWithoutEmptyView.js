@@ -4,8 +4,8 @@ import { logger } from '../../lib/logger.js';
 
 /**
  * returns a string and a css class
- * @param  {string} index
- * @param  {string} element{returnindex==="Youdidnotselectanything..."?"Youdidnotselectanything..."
+ * @param  {string} index -string
+ * @param  {string} element -string
  * @returns string
  */
 export function newArrayWithoutEmptyView(index, element){
