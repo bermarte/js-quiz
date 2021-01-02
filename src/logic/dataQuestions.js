@@ -1,7 +1,10 @@
 'use stict';
 
 import { quizData } from '../data.js';
-
+/**
+ * reads data and creates all the elements of the UI
+ * 
+ */
 export const dataFunction = () => {
     for (let quiz of quizData.questions) {
         console.log(quizData.questions);

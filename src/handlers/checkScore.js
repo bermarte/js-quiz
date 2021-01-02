@@ -14,7 +14,10 @@ $('#carouselExampleControls').on('slid.bs.carousel', function () {
     currentIndex = $('div.active').index() + 1;
     $('.num').html('' + currentIndex + '/' + totalItems + '');
 });
-
+/**
+ * update the score and store it in localStore
+ * @param  {e} e -event
+ */
 export function checkScore(e) {
     const currentQuestion = document.querySelector('.num');
     const allInputs = document.querySelectorAll('.active ol input');
