@@ -29,6 +29,10 @@
   - [reviewQuizSetter.js](#srclogicreviewQuizSetterjs)
 - [views](#views)
   - [artify.js](#srcviewsartifyjs)
+  - [correctAnswer.js](#srcviewscorrectAnswerjs)
+  - [green.js](#srcviewsgreenjs)
+  - [newArrayWithoutEmptyView.js](#srcviewsnewArrayWithoutEmptyViewjs)
+  - [red.js](#srcviewsredjs)
 - [data.js](#srcdatajs)
 - [init.js](#srcinitjs)
 - [review.js](#srcreviewjs)
@@ -310,6 +314,53 @@ each line in the provided array will be mirrored around the separator
 | --------- | --------------------------------- | --------------------------------------------------------------------------------- |
 | lines     | <code>Array.&lt;string&gt;</code> | an array of strings, each one will be mirrored around the separator on a new line |
 | separator | <code>string</code>               | the string to separate mirrored lines                                             |
+
+---
+
+### [./src/views/correctAnswer.js](./src/views/correctAnswer.js?study)
+
+<a name="correctAnswer"></a>
+
+## correctAnswer()
+
+returns text and a css class
+
+---
+
+### [./src/views/green.js](./src/views/green.js?study)
+
+<a name="green"></a>
+
+## green()
+
+returns a css class
+
+---
+
+### [./src/views/newArrayWithoutEmptyView.js](./src/views/newArrayWithoutEmptyView.js?study)
+
+<a name="newArrayWithoutEmptyView"></a>
+
+## newArrayWithoutEmptyView(index, element) ⇒
+
+returns a string and a css class
+
+**Returns**: string
+
+| Param   | Type                | Description |
+| ------- | ------------------- | ----------- |
+| index   | <code>string</code> | string      |
+| element | <code>string</code> | string      |
+
+---
+
+### [./src/views/red.js](./src/views/red.js?study)
+
+<a name="red"></a>
+
+## red()
+
+returns a css class
 
 [TOP](#DOCS)
 
