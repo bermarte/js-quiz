@@ -53,6 +53,8 @@ export function checkScore(e) {
     }
 };
 alert('test');
+const test = 7  ;
 logger.add({
-    handler: 'checkScore'
+    handler: 'checkScore',
+    test
 });
