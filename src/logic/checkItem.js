@@ -1,6 +1,8 @@
 'use strict';
 
 import { lastQuestionSetter } from './lastQuestionSetter.js';
+import { logger } from '../../lib/logger.js';
+
 /**
  * takes care of the Bootstrap carousel component and creates the UI
  * 
@@ -50,3 +52,7 @@ export function checkitem() {
         }
     });
 };
+
+logger.add({
+    logic: 'checkitem'
+});

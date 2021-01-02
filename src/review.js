@@ -4,9 +4,12 @@ import { quizData } from "./data.js";
 import { getNull } from './logic/getNull.js';
 import { newArrayWithoutEmpty, total, getArray } from './logic/reviewArray.js';
 import './listeners/goToIndex.js';
+import { green } from './views/green.js';
+import { red } from './views/red.js';
+import { correctAnswer } from './views/correctAnswer.js';
+import { newArrayWithoutEmptyView } from './views/newArrayWithoutEmptyView.js';//54
 
 
-//const total = quizData.questions.length;
 let counter = 0;
 const divEl = document.querySelectorAll(".review")[0];
 
@@ -31,25 +34,24 @@ for (let quiz of quizData.questions) {
   }
 
   const pEl = document.createElement("p");
-  pEl.innerHTML = `Correct answer is <span class='answers'>${quiz.answers[quiz.correct]}</span><br>`;
+  //view
+  pEl.innerHTML = correctAnswer(quiz.answers[quiz.correct]);
   divEl2.appendChild(pEl);
 
   //CSS color: red if fails, green if right
   let userAnswer;
   if (quiz.answers[quiz.correct] === newArrayWithoutEmpty[quizData.questions.indexOf(quiz)]){
-    userAnswer = "user-answers-green";
+    //view
+    userAnswer = green();
   }
   else{
-    userAnswer = "user-answers-red";
+    //view
+    userAnswer = red();
   }
   const pEl_2 = document.createElement("p");
-  let innerHTMLValue =
-    newArrayWithoutEmpty[quizData.questions.indexOf(quiz)] ===
-    "You did not select anything..."
-      ? "You did not select anything..."
-      : `Your answer is <span class=${userAnswer}>${
-          newArrayWithoutEmpty[quizData.questions.indexOf(quiz)]
-        }</span>`;
+  //view
+  let innerHTMLValue = newArrayWithoutEmptyView(newArrayWithoutEmpty[quizData.questions.indexOf(quiz)], userAnswer);
+
   // horizontal line to separate questions
   const line = document.createElement("hr");
   line.classList.add("ruler");
