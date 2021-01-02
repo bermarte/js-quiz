@@ -52,7 +52,7 @@ export function checkScore(e) {
         }
     }
 };
-
+alert('test');
 logger.add({
     handler: 'checkScore'
 });
