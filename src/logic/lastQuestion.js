@@ -1,7 +1,8 @@
 'use strict';
 
 import { logger } from '../../lib/logger.js';
-import { reviewQuizSetter } from './reviewQuizSetter.js'; 
+import { reviewQuizSetter } from './reviewQuizSetter.js';
+
 /**
  * set the UI for the last button to review the quiz
  * 

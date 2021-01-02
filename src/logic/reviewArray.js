@@ -1,10 +1,12 @@
 'use strict';
 
+import { logger } from '../../lib/logger.js';
 import { newArrayWithEmpty } from './getNull.js';
 import { quizData } from "../data.js";
 
 export const newArrayWithoutEmpty = [];
 export const total = quizData.questions.length;
+
 /**
  * creates the array of the answers given by the user, 'newArrayWithoutEmpty'
  * 
@@ -18,4 +20,8 @@ export function getArray() {
     }
   }
 }
+
+logger.add({
+  logic: 'getArray'
+});
 

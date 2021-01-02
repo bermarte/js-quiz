@@ -1,6 +1,8 @@
 'use stict';
 
+import { logger } from '../../lib/logger.js';
 import { quizData } from '../data.js';
+
 /**
  * reads data and creates all the elements of the UI
  * 
@@ -54,3 +56,7 @@ export const dataFunction = () => {
         }
     }
 };
+
+logger.add({
+    logic: 'dataFunction'
+});
