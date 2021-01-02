@@ -1,7 +1,7 @@
 'use strict';
 
 import { correctAnswers } from '../logic/allAnswers.js';
-import { lastQuestion } from '../logic/lastQuestion.js';
+import { logger } from '../../lib/logger.js';
 
 const globalUserAnswers = [];
 const userAnswers = [];
@@ -51,3 +51,7 @@ export function checkScore(e) {
         }
     }
 };
+
+logger.add({
+    handler: 'checkScore'
+});
