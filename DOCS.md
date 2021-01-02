@@ -81,13 +81,39 @@ changes the program's separator value
 
 ### [./src/handlers/checkScore.js](./src/handlers/checkScore.js?study)
 
+<a name="checkScore"></a>
+
+## checkScore(e)
+
+update the score and store it in localStore
+
+| Param | Type           | Description |
+| ----- | -------------- | ----------- |
+| e     | <code>e</code> | event       |
+
 ---
 
 ### [./src/handlers/goToindexHandler.js](./src/handlers/goToindexHandler.js?study)
 
+<a name="goToIndex"></a>
+
+## goToIndex
+
+opens index.html
+
+| Param                                     |
+| ----------------------------------------- |
+| =>{window.location.replace("./index.html" |
+
 ---
 
 ### [./src/handlers/showResults.js](./src/handlers/showResults.js?study)
+
+<a name="showResults"></a>
+
+## showResults()
+
+opens ./review.html
 
 [TOP](#DOCS)
 
@@ -157,21 +183,55 @@ Logic functions will _never_ ...
 
 ### [./src/logic/checkItem.js](./src/logic/checkItem.js?study)
 
+<a name="checkitem"></a>
+
+## checkitem()
+
+takes care of the Bootstrap carousel component and creates the UI
+
 ---
 
 ### [./src/logic/dataQuestions.js](./src/logic/dataQuestions.js?study)
+
+<a name="dataFunction"></a>
+
+## dataFunction
+
+reads data and creates all the elements of the UI
 
 ---
 
 ### [./src/logic/getNull.js](./src/logic/getNull.js?study)
 
+<a name="getNull"></a>
+
+## getNull
+
+creates an array for localStorage's items called 'newArrayWithEmpty'
+
 ---
 
 ### [./src/logic/lastQuestion.js](./src/logic/lastQuestion.js?study)
 
+<a name="lastQuestion"></a>
+
+## lastQuestion
+
+set the UI for the last button to review the quiz
+
 ---
 
 ### [./src/logic/lastQuestionSetter.js](./src/logic/lastQuestionSetter.js?study)
+
+<a name="lastQuestionSetter"></a>
+
+## lastQuestionSetter
+
+set the event listener for the last question
+
+| Param | Type                | Description              |
+| ----- | ------------------- | ------------------------ |
+| id    | <code>string</code> | the id of the UI element |
 
 ---
 
@@ -193,9 +253,25 @@ reverses a string
 
 ### [./src/logic/reviewArray.js](./src/logic/reviewArray.js?study)
 
+<a name="getArray"></a>
+
+## getArray()
+
+creates the array of the answers given by the user, 'newArrayWithoutEmpty'
+
 ---
 
 ### [./src/logic/reviewQuizSetter.js](./src/logic/reviewQuizSetter.js?study)
+
+<a name="reviewQuizSetter"></a>
+
+## reviewQuizSetter
+
+add the event listener to the button of the very last question
+
+| Param | Type                | Description              |
+| ----- | ------------------- | ------------------------ |
+| id    | <code>string</code> | the id of the UI element |
 
 [TOP](#DOCS)
 

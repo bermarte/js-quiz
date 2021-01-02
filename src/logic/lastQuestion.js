@@ -1,7 +1,10 @@
 'use strict';
 
 import { reviewQuizSetter } from './reviewQuizSetter.js'; 
-
+/**
+ * set the UI for the last button to review the quiz
+ * 
+ */
 export const lastQuestion = () => {
 
     //remove last button

@@ -2,7 +2,10 @@
 
 import { lastQuestion } from './lastQuestion.js';
 import { checkScore } from '../handlers/checkScore.js';
-
+/**
+ * set the event listener for the last question
+ * @param  {string} id - the id of the UI element
+ */
 export const lastQuestionSetter = (id) => {
     const lastQuestionBtn = document.getElementById(id);
     lastQuestionBtn.addEventListener('click', lastQuestion);

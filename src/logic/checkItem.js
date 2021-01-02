@@ -1,7 +1,10 @@
 'use strict';
 
 import { lastQuestionSetter } from './lastQuestionSetter.js';
-
+/**
+ * takes care of the Bootstrap carousel component and creates the UI
+ * 
+ */
 export function checkitem() {
     const carouselLength = $('.carousel-item').length;// -1
 
@@ -46,4 +49,4 @@ export function checkitem() {
             $('.carousel-control-next').removeClass('d-none');
         }
     });
-}
+};
