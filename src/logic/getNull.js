@@ -1,6 +1,5 @@
 'use strict';
 
-//import { newArrayWithEmpty } from './reviewArray.js';
 export const newArrayWithEmpty = [];
 
 const get = JSON.parse(localStorage.getItem("globalAnswerStorage"));

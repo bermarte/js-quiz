@@ -4,8 +4,6 @@ import { newArrayWithEmpty } from './getNull.js';
 import { quizData } from "../data.js";
 
 export const newArrayWithoutEmpty = [];
-//export const newArrayWithoutEmpty = [];
-//const get = JSON.parse(localStorage.getItem("globalAnswerStorage"));
 export const total = quizData.questions.length;
 
 export function getArray() {

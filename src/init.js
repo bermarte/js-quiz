@@ -1,9 +1,5 @@
 'use strict';
 
-// import all listener files so they can attach to the DOM
-// import './listeners/keydown.js';
-// import './listeners/transitioned.js';
-
 import './listeners/next.js';
 import { dataFunction } from './logic/dataQuestions.js';
 import { checkitem } from './logic/checkItem.js';

@@ -26,7 +26,10 @@ export function checkScore(e) {
         if (allInputs[i].checked) {
             //allLabels[i].innerHTML is the text of the answer selected
             const selected = allLabels[i].innerHTML;
-            globalUserAnswers.push({[currentIndex-1]:selected});
+            let sel;
+            currentIndex === 0?sel = {[currentIndex]:selected}:sel = {[currentIndex-1]:selected};
+            globalUserAnswers.push(sel);
+        
             localStorage.setItem("globalAnswerStorage", JSON.stringify(globalUserAnswers));
             const tmp = currentQuestion.innerHTML.split("/");
             const currNum = tmp[0];
