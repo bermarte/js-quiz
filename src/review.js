@@ -2,15 +2,16 @@
 
 import { quizData } from "./data.js";
 import { getNull } from './logic/getNull.js';
-import { newArrayWithoutEmpty } from './logic/reviewArray.js';
+import { newArrayWithoutEmpty, total, getArray } from './logic/reviewArray.js';
 import './listeners/goToIndex.js';
 
 
-const total = quizData.questions.length;
+//const total = quizData.questions.length;
 let counter = 0;
 const divEl = document.querySelectorAll(".review")[0];
 
 getNull();
+getArray();
 
 for (let quiz of quizData.questions) {
   counter++;
