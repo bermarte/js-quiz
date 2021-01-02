@@ -1,5 +1,6 @@
 'use strict';
 
+import { logger } from '../../lib/logger.js';
 import { reviewQuizSetter } from './reviewQuizSetter.js'; 
 /**
  * set the UI for the last button to review the quiz
@@ -25,3 +26,7 @@ export const lastQuestion = () => {
     //calling the function to view all the results
     reviewQuizSetter(reviewQuiz.id);
 }
+
+logger.add({
+    logic: 'lastQuestion'
+});

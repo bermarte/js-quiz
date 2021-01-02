@@ -1,5 +1,5 @@
 'use strict';
-
+import { logger } from '../../lib/logger.js';
 import { lastQuestion } from './lastQuestion.js';
 import { checkScore } from '../handlers/checkScore.js';
 /**
@@ -11,3 +11,7 @@ export const lastQuestionSetter = (id) => {
     lastQuestionBtn.addEventListener('click', lastQuestion);
     lastQuestionBtn.addEventListener('click', checkScore);
 }
+
+logger.add({
+    logic: 'lastQuestionSetter'
+});

@@ -1,5 +1,7 @@
 'use strict';
 
+import { logger } from '../../lib/logger.js';
+
 export const newArrayWithEmpty = [];
 
 const get = JSON.parse(localStorage.getItem("globalAnswerStorage"));
@@ -15,3 +17,7 @@ export const getNull = () => {
     }
 }
 getNull();
+
+logger.add({
+    logic: 'getNull'
+});
