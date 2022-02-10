@@ -4,7 +4,6 @@ Group 5 is:
 - [Bermarte](https://github.com/bermarte)
 - [Burak](https://github.com/businan)
 - [Patrick](https://github.com/22count22)
-- [Peyman](https://github.com/peymanshahmarimikaeeldarehsi)
 - [Tahmina](https://github.com/tahminarasoli/)
 
 
