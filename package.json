@@ -21,7 +21,7 @@
     "jsdoc-to-markdown": "^6.0.1",
     "prettier": "^2.2.1",
     "chai": "^4.2.0",
-    "mocha": "^8.2.1",
+    "mocha": "^10.1.0",
     "jsdom": "^16.4.0",
     "@actions/core": "^1.2.6"
   }
